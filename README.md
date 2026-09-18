@@ -11,7 +11,7 @@ A ambição pedagógica é permitir que alguém sem conhecimento prévio percorr
 O corpus é único. Tags funcionam como lentes. Relações explícitas só são criadas quando acrescentam significado que as tags não expressam. Ausência de evidência é lacuna, não prova de ausência de conhecimento.
 
 ## Colaboração por agentes
-O repositório é multiagente. Codex, Gemini CLI, Cloud Code/Gemini Code Assist e futuros agentes podem colaborar, mas o GitHub canoniza estado. Comece por [AGENTS.md](AGENTS.md). O Gemini possui também [GEMINI.md](GEMINI.md), que apenas adapta o contexto comum ao ambiente Gemini.
+O repositório é multiagente. Codex, Gemini CLI, Cloud Code/Gemini Code Assist e futuros agentes podem colaborar, mas o GitHub canoniza estado. Comece por [ESTADO.md](ESTADO.md), depois [AGENTS.md](AGENTS.md) e [agentes/INDEX.md](agentes/INDEX.md). O Gemini possui também [GEMINI.md](GEMINI.md), que adapta o contexto comum ao ambiente Gemini.
 
 ## Navegação
 - `capturas/`: entrada bruta ainda não estruturada.
@@ -26,7 +26,8 @@ O repositório é multiagente. Codex, Gemini CLI, Cloud Code/Gemini Code Assist 
 - `contexto/`: memória contextual do projeto; não é diretório de scripts.
 - `templates/`: formatos reutilizáveis validados.
 - `codex/`: Goals e retornos do workflow de construção.
-- `agentes/`: contratos e adaptadores para colaboração multiagente.
+- `agentes/`: contratos, índice e adaptadores para colaboração multiagente.
+- `ESTADO.md`: ponteiro operacional leve; a versão técnica corrente é o HEAD de `origin/main`.
 - `ferramentas/`: scripts/utilitários compartilhados entre agentes.
 - `.gemini/`: configuração e skills do ambiente Gemini; não é corpus canônico.
 - `.vscode/`: configuração compartilhável do workspace/editor.
