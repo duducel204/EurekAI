@@ -25,3 +25,10 @@ Acelerar significa reduzir trabalho manual, duplicação, espera e releitura —
 
 ## Pesquisa distribuída
 Lacunas podem gerar investigações para Codex, ChatGPT, outras IAs, André, repositórios, arquivos ou documentação. GitHub é memória canônica das perguntas, evidências incorporadas, decisões e estado; não precisa conter cópia indiscriminada de todo histórico externo.
+
+## Derivação antecipada sem convergência prematura
+A partir do GOAL-003, aplicar [DIRETRIZ-TRANSVERSAL-DERIVACAO-REUTILIZAVEL.md](DIRETRIZ-TRANSVERSAL-DERIVACAO-REUTILIZAVEL.md): uma leitura histórica pode produzir evidência e, quando sustentado, relações, transições cognitivas e matéria-prima candidata para Goals futuros. Essas derivações não executam nem decidem os Goals posteriores.
+
+Observar especialmente conceito antes do nome, nome antes da compreensão, transições de modelo mental, retenção/reaprendizagem, transferência entre projetos, conhecimento tácito e autoria cognitiva humano–IA.
+
+A hipótese de três mapas — conceitual, histórico e cognitivo — permanece aberta para teste; não é arquitetura canonizada.
