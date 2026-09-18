@@ -4,11 +4,11 @@ Orientações para Gemini CLI e ambientes Gemini/Google que colaborarem no Eurek
 
 ## Reinício de sessão
 Assuma memória volátil. A cada nova sessão:
-1. releia `/AGENTS.md`;
-2. releia `/GEMINI.md`;
-3. releia este arquivo;
+1. execute `git fetch origin` e confirme o HEAD de `origin/main`;
+2. leia `/ESTADO.md`, `/AGENTS.md` e `/agentes/INDEX.md`;
+3. releia `/GEMINI.md` e este arquivo;
 4. leia o README da área de trabalho e o Goal/INV aplicável;
-5. sincronize `main` e verifique mudanças recentes.
+5. registre a base usada e verifique mudanças recentes.
 
 Não dependa de instruções preservadas apenas no chat anterior.
 
@@ -30,6 +30,9 @@ Configuração Gemini fica em `.gemini/`; regras de agentes em `agentes/`; scrip
 `codex/retornos/` não é destino normal do Gemini. Só escreva ali quando um Goal ou instrução explícita autorizar.
 
 `conhecimento/` contém conhecimento estruturado. `pedagogia/` contém a transformação desse conhecimento em progressão, explicação, ensino, exercícios e experiências de aprendizagem.
+
+## Antes de publicar
+Faça novo `git fetch origin`. Se o HEAD de `origin/main` mudou desde o início, revise os commits e arquivos novos, reconcilie o trabalho e refaça as validações antes de commit/push/PR.
 
 ## Saída
 Preserve localizador/procedência. Descobertas devem alimentar estruturas canônicas (fonte, evidência, investigação, mapa, decisão etc.), nunca uma base paralela do Gemini.
