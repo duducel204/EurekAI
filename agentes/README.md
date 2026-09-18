@@ -8,13 +8,25 @@ Camada de interoperabilidade para agentes que colaboram no EurekAI. Guarda contr
 ## Papéis atuais
 - **Codex:** executor principal do workflow orientado a Goals e mudanças versionadas.
 - **Gemini CLI:** exploração, pesquisa, análise, automação CLI e uso de capacidades Google/MCP quando autorizado.
-- **Cloud Code / Gemini Code Assist:** contexto de workspace e tarefas relacionadas ao ecossistema Google Cloud/desenvolvimento.
+- **Cloud Code / Gemini Code Assist:** trabalho sobre workspace, código e ecossistema Google Cloud, sem assumir que capacidade disponível virou arquitetura.
 - **ChatGPT:** planejamento, síntese, auditoria e coordenação quando conectado às fontes necessárias.
 
 Papéis são preferências operacionais, não exclusividade. O Goal e as permissões determinam o que cada agente pode fazer.
+
+## Onde cada tipo de coisa deve viver
+- regras entre agentes → `agentes/`;
+- configuração Gemini/Google → `.gemini/`;
+- configuração de editor → `.vscode/`;
+- scripts/utilitários compartilhados → `ferramentas/`;
+- Goals/retornos → `codex/`;
+- conhecimento/evidência/contexto → somente nas pastas semânticas correspondentes.
+
+Nenhum agente deve usar uma pasta semântica como “depósito genérico” de scripts ou configuração.
 
 ## Regra de entrada
 Todo agente começa em `/AGENTS.md`, depois lê o README da área e o Goal/pendência relevante. Adaptações específicas devem apontar de volta para o contrato comum.
 
 ## Regra de saída
 Resultado relevante volta como mudança rastreável, evidência, retorno ou investigação. Sessão de chat não é armazenamento canônico.
+
+Configuração de uma ferramenta pode permanecer apenas como configuração; ela não precisa ser promovida ao conhecimento do EurekAI.
