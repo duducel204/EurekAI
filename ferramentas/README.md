@@ -34,6 +34,15 @@ Confere links Markdown relativos entre arquivos do repositório, ignorando URLs 
 python ferramentas/validate_links.py
 ```
 
+### `validate_goal_sequence.py` — preflight estrutural da sequência 005→006→007
+Confere se os três Goals preparados possuem dependências e seções mínimas de execução/validação.
+
+```bash
+python ferramentas/validate_goal_sequence.py
+```
+
+Esse teste é estrutural: não substitui Acceptance nem validação semântica de cada Goal.
+
 ### `check_all.py` — preflight comum
 Executa as verificações compartilhadas acima.
 
@@ -89,7 +98,7 @@ Se `repo_state.py` indicar `STALE`, revise o que entrou em `main`, confira confl
 - documentar entrada, saída, pré-requisitos, códigos de saída e efeitos colaterais.
 
 ## Candidatas futuras — só se houver necessidade real
-- auditor de coerência entre status dos Goals e roadmap;
+- auditor geral de coerência entre status dos Goals e roadmap;
 - detector de arquivos sensíveis/segredos antes de publicação;
 - gerador de handoff mínimo;
 - auditor de procedência/localizadores de evidência.
