@@ -9,12 +9,13 @@ Continuar o projeto sem depender da conversa que originou o trabalho. O GitHub �
 **Nenhum agente deve presumir memória entre sessões.**
 
 Ao iniciar uma nova sessão, reabrir o workspace ou perder contexto:
-1. leia este arquivo;
-2. leia o adaptador específico do seu agente;
-3. leia o README da área afetada;
-4. consulte `codex/goals/ROADMAP-GOALS.md` e o Goal/INV aplicável;
-5. sincronize `main`;
-6. verifique PRs, branches, retornos e commits recentes antes de agir.
+1. sincronize referências remotas com `git fetch origin`;
+2. leia `ESTADO.md` e confirme o HEAD atual de `origin/main`;
+3. leia este arquivo e `agentes/INDEX.md`;
+4. leia o adaptador específico do seu agente;
+5. leia o README da área afetada;
+6. consulte `codex/goals/ROADMAP-GOALS.md` e o Goal/INV aplicável;
+7. verifique PRs, branches, retornos e commits recentes antes de agir.
 
 A sessão nunca é a fonte de verdade. O repositório deve conter contexto suficiente para reconstruir o estado operacional.
 
@@ -66,6 +67,22 @@ Preferir corpus único + tags + consultas/lentes. Não criar cópias por agente,
 Codex, Gemini CLI, Cloud Code/Gemini Code Assist, ChatGPT e futuros agentes podem ter especialidades diferentes. Nenhum agente possui uma “verdade própria”: descobertas retornam ao GitHub por evidência, documento ou PR apropriado.
 
 **Capacidade do agente ≠ configuração local ≠ artefato operacional ≠ decisão do EurekAI ≠ conhecimento canônico.**
+
+## Validação de versão e concorrência
+Todo trabalho material deve ter uma base identificável: o SHA de `origin/main` observado no início.
+
+Antes de declarar “estado atual”, commitar, fazer push ou abrir PR:
+1. execute `git fetch origin`;
+2. obtenha o HEAD atual de `origin/main`;
+3. compare com a base usada no trabalho;
+4. se `main` avançou, revise os commits/arquivos novos;
+5. verifique conflito semântico, mesmo quando o Git não acusa conflito textual;
+6. reconcilie/rebase/reaplique conforme necessário;
+7. repita as validações antes de publicar.
+
+Um agente **não deve publicar trabalho calculado sobre uma base antiga sem revisar o que mudou desde então**. Mudanças de outro agente devem ser tratadas como informação nova, não sobrescritas por conveniência.
+
+O protocolo resumido está em `agentes/INDEX.md`.
 
 ## Git e publicação
 Por padrão:
