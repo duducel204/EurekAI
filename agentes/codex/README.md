@@ -3,10 +3,10 @@
 Codex é atualmente o executor sistemático dos Goals do EurekAI.
 
 ## Entrada
-Leia `/AGENTS.md`, `codex/goals/ROADMAP-GOALS.md`, o Goal selecionado, seus predecessores/retornos quando exigidos e os READMEs das áreas afetadas.
+Execute `git fetch origin`, confirme o HEAD de `origin/main` e leia `/ESTADO.md`, `/AGENTS.md`, `/agentes/INDEX.md`, `codex/goals/ROADMAP-GOALS.md`, o Goal selecionado, seus predecessores/retornos quando exigidos e os READMEs das áreas afetadas. Registre a base usada.
 
 ## Execução
-Respeite literalmente o estado do Goal, dependências, stop conditions e critérios de aceitação. Verifique Git/PRs antes de repetir trabalho. Trabalhe por branch/PR quando o workflow exigir.
+Respeite literalmente o estado do Goal, dependências, stop conditions e critérios de aceitação. Verifique Git/PRs antes de repetir trabalho. Antes de commit/push/PR, faça novo `git fetch origin`; se `main` avançou desde a base, revise, reconcilie e valide novamente antes de publicar. Trabalhe por branch/PR quando o workflow exigir.
 
 ## Saída
 Produza retorno auditável em `codex/retornos/` quando especificado e deixe o Git consistente com a execução. Não promova o Goal seguinte por conta própria quando isso exigir revisão externa.
