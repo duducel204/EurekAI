@@ -25,7 +25,8 @@ O repositório é multiagente. Codex, Gemini CLI, Cloud Code/Gemini Code Assist 
 - `ideias-de-produto/`: possibilidades derivadas, sem aprovação implícita.
 - `contexto/`: memória contextual do projeto; não é diretório de scripts.
 - `templates/`: formatos reutilizáveis validados.
-- `codex/`: Goals e retornos do workflow de construção.
+- `codex/`: Goals, roadmap e protocolos de execução.
+- `execucoes/`: relatórios/handoffs de execução independentes do agente.
 - `agentes/`: contratos, índice e adaptadores para colaboração multiagente.
 - `ESTADO.md`: ponteiro operacional leve; a versão técnica corrente é o HEAD de `origin/main`.
 - `ferramentas/`: scripts/utilitários compartilhados entre agentes.
