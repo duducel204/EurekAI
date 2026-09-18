@@ -6,7 +6,7 @@
 | --- | --- | --- | --- | --- |
 | F-001 | [EurekAI, branch `main`](https://github.com/duducel204/EurekAI) | Árvore e arquivos lidos no commit `6f11296776668055aa94ce5c139541bcb97381ad` | **DISPONÍVEL** | Documentos de contexto e Goals; não é corpus de experiências do autor. |
 | F-002 | [Histórico Git do EurekAI](https://github.com/duducel204/EurekAI/commits/main/) | Listagem de commits acessível em 2026-09-18 | **DISPONÍVEL** | Histórico de construção do repositório; commit isolado não comprova autoria intelectual ou domínio. |
-| F-003 | Conversas e registros de projetos anteriores de André | Nenhum localizador/corpus identificado no repositório; acesso não testável sem indicação da fonte | **PRECISA SER EXPORTADA** e **EXIGE INTERVENÇÃO DO ANDRÉ** | Existência, extensão e permissões específicas ainda desconhecidas. Importação selecionada **PODE SER AUTOMATIZADA** após disponibilização e revisão. |
+| F-003 | Contexto histórico recuperável de conversas/projetos de André via ChatGPT | Acesso testado em 2026-09-18 por recuperação histórica selecionada; primeiro passe orientado a eventos observáveis | **DISPONÍVEL PARCIALMENTE** | Cobertura não exaustiva; conteúdo de assistente não prova ação/conhecimento do autor; material sensível não deve ser copiado. |
 
 ## Lotes registrados
 
@@ -15,4 +15,4 @@
 | L-001 | F-001 | Árvore de `main@6f11296776668055aa94ce5c139541bcb97381ad` | [Árvore no commit](https://api.github.com/repos/duducel204/EurekAI/git/trees/6f11296776668055aa94ce5c139541bcb97381ad?recursive=1) | Sem extração de conhecimento pessoal; documentos continuam no repositório. |
 | L-002 | F-002 | Histórico até `6f11296776668055aa94ce5c139541bcb97381ad` | [Commits](https://github.com/duducel204/EurekAI/commits/main/) | Sobrepõe parcialmente L-001; não contar commits e seus arquivos como evidências independentes. |
 
-F-003 não possui lote: não há recorte, original ou permissão testada. A [pendência INV-001](../investigacao/pendencias/INV-001-CORPUS-HISTORICO.md) acompanha sua localização e seleção. Lotes futuros só devem ser incluídos após teste de acesso e revisão da exposição.
+| L-003 | F-003 | Primeiro passe histórico recuperado em 2026-09-18 | Contextos/conversas recuperáveis pelo ChatGPT; derivação em [`experiencias/INVENTARIO-EVIDENCIAS-001.md`](../experiencias/INVENTARIO-EVIDENCIAS-001.md) | Não sobrepor com futuros exports sem deduplicação por episódio/data/contexto. |\n\nF-003 permanece parcial. A [pendência INV-001](../investigacao/pendencias/INV-001-CORPUS-HISTORICO.md) acompanha a ampliação do corpus; a intervenção manual de André deixou de ser requisito para iniciar a mineração.
