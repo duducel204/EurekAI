@@ -8,7 +8,7 @@ Camada de interoperabilidade para agentes que colaboram no EurekAI. Guarda contr
 ## Memória operacional
 Sessões de agentes são voláteis. O repositório deve ser suficiente para reconstruir contexto e regras depois que uma conversa for encerrada.
 
-Ao iniciar nova sessão, todo agente deve reler `/AGENTS.md`, seu adaptador, o README da área afetada e o Goal/INV aplicável antes de agir.
+Ao iniciar nova sessão, todo agente deve executar `git fetch origin`, conferir `/ESTADO.md`, reler `/AGENTS.md`, `/agentes/INDEX.md`, seu adaptador, o README da área afetada e o Goal/INV aplicável antes de agir.
 
 ## Papéis atuais
 - **Codex:** executor principal do workflow orientado a Goals e mudanças versionadas.
@@ -36,6 +36,9 @@ Nenhum agente deve usar uma pasta semântica como “depósito genérico” de s
 
 ## Regra de entrada
 Todo agente começa em `/AGENTS.md`, depois lê o README da área e o Goal/pendência relevante. Adaptações específicas devem apontar de volta para o contrato comum.
+
+## Regra de concorrência
+A base de trabalho é o SHA de `origin/main` observado no início. Antes de commit/push/PR, buscar novamente o remoto e comparar. Se `main` avançou, revisar e reconciliar antes de publicar. O procedimento curto está em `INDEX.md`.
 
 ## Regra de saída
 Resultado relevante volta como mudança rastreável, evidência, retorno ou investigação. Sessão de chat não é armazenamento canônico.
