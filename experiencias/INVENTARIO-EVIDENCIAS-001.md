@@ -1,5 +1,7 @@
 # Inventário inicial de evidências — Lote L-003
 
+> **Procedência pendente:** este primeiro passe histórico não registrou localizadores individuais das conversas/arquivos originais. E-001–E-013 são pistas provisórias, não evidências auditadas nem base para atribuir conhecimento a André. Consulte a [auditoria por entrada](AUDITORIA-EVIDENCIAS-001.md). O texto original foi preservado para permitir recuperação e correção, sem transformá-lo em fato confirmado.
+
 **Goal:** GOAL-003  
 **Fonte:** F-003 — contexto histórico recuperável do ChatGPT  
 **Recorte:** primeiro passe, 2026-09-18  
