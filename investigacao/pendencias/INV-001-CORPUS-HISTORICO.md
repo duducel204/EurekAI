@@ -1,7 +1,7 @@
 # INV-001 — Localizar e selecionar corpus histórico da trajetória
 
 **Status:** PARCIAL  
-**Importância:** bloqueia a mineração substantiva do GOAL-003  
+**Importância:** limita cobertura e atribuição pessoal no GOAL-003  
 **Procedência:** [GOAL-001, inventário e prontidão](../../codex/retornos/GOAL-001-RELATORIO-E-CONTRATO.md) e [GOAL-002](../../codex/goals/GOAL-002-AQUISICAO-E-INVESTIGACAO.md).
 
 ## Pergunta
@@ -32,3 +32,8 @@ Marcar **PARCIAL** quando houver ao menos uma fonte testada mas ainda insuficien
 ## Atualização — 2026-09-18
 
 O acesso histórico via ChatGPT foi testado e gerou o lote **L-003**, registrado em `fontes/REGISTRO.md`, com primeira derivação em `experiencias/INVENTARIO-EVIDENCIAS-001.md`. Isso remove o bloqueio absoluto do GOAL-003. A pendência permanece **PARCIAL** porque o corpus ainda não é exaustivo e outros históricos/arquivos podem acrescentar evidência ou contraevidência.
+
+
+## Atualização — auditoria e novos lotes
+
+Os lotes públicos **L-004/L-005** foram registrados com localizadores por observação no [inventário 002](../../experiencias/INVENTARIO-EVIDENCIAS-002.md). O lote L-003 foi [auditado](../../experiencias/AUDITORIA-EVIDENCIAS-001.md): nenhuma das 13 entradas recuperadas possui localizador individual do original; três receberam apenas corroboração parcial por documentos de projeto. A pendência continua **PARCIAL**. Para fechá-la, recuperar os originais por episódio e resolver ator, data, resultado e assistência de IA, ou delimitar formalmente um corpus inicial menor com cobertura suficiente para o próximo Goal. Novas fontes não devem ser publicadas indiscriminadamente.
