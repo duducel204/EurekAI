@@ -16,9 +16,9 @@ Goals posteriores devem ser refinados pelas evidências dos anteriores. Não exe
 - GOAL-002 — Aquisição de evidências e fila de investigação — CONCLUÍDO.
 - GOAL-003 — Mineração inicial e inventário — CONCLUÍDO COMO MINERAÇÃO INICIAL; ingestão incremental continua.
 - GOAL-004 — Modelar o conhecimento atual — CONCLUÍDO.
-- GOAL-005 — Relações, dependências e transferências — PREPARADO; NÃO LIBERADO.
-- GOAL-006 — Progressão do zero à fronteira atual — PREPARADO; depende de GOAL-005 CONCLUÍDO.
-- GOAL-007 — Engenharia pedagógica atemporal — PREPARADO; depende de GOAL-006 CONCLUÍDO.
+- GOAL-005 — Relações, dependências e transferências — CONCLUÍDO.
+- GOAL-006 — Progressão do zero à fronteira atual — CONCLUÍDO.
+- GOAL-007 — Engenharia pedagógica atemporal — CONCLUÍDO.
 - GOAL-008 — Produção sistemática do conteúdo — SEED_DRAFT.
 - GOAL-009 — Auditoria, validação e correção — SEED_DRAFT.
 - GOAL-010 — Ingestão contínua e evolução — SEED_DRAFT.
