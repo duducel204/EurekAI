@@ -22,7 +22,7 @@ Exemplos:
 ## Famílias iniciais — abertas
 
 ### Assunto / tecnologia
-`#api #github #github-cli #pr #auto-merge #git #ssh #shell #automacao #script #validacao #codex #mcp #termux #powershell #gemini #openwebui #cloud #agentes`
+`#api #github #git #codex #mcp #termux #powershell #gemini #openwebui #cloud #agentes`
 
 ### Natureza do item
 `#evidencia #artefato #documento #ideia #plano #decisao #hipotese #experiencia #erro #descoberta #pendencia`
