@@ -1,6 +1,6 @@
 # INV-001 — Localizar e selecionar corpus histórico da trajetória
 
-**Status:** ABERTA  
+**Status:** PARCIAL  
 **Importância:** bloqueia a mineração substantiva do GOAL-003  
 **Procedência:** [GOAL-001, inventário e prontidão](../../codex/retornos/GOAL-001-RELATORIO-E-CONTRATO.md) e [GOAL-002](../../codex/goals/GOAL-002-AQUISICAO-E-INVESTIGACAO.md).
 
@@ -27,3 +27,8 @@ Não concluir que registros inexistem porque não estão no EurekAI. Não tratar
 ## Fechamento e destino
 
 Marcar **PARCIAL** quando houver ao menos uma fonte testada mas ainda insuficiente para o recorte inicial. Marcar **RESOLVIDA** quando um corpus inicial útil estiver selecionado, acesso testado e cada fonte/lote registrado em [`fontes/REGISTRO.md`](../../fontes/REGISTRO.md), com referências seguras aos originais. Apontar aqui os IDs dos lotes incorporados, sem copiar o corpus para este ticket. Se houver bloqueio de permissão, registrar **BLOQUEADA** e a ação exata necessária.
+
+
+## Atualização — 2026-09-18
+
+O acesso histórico via ChatGPT foi testado e gerou o lote **L-003**, registrado em `fontes/REGISTRO.md`, com primeira derivação em `experiencias/INVENTARIO-EVIDENCIAS-001.md`. Isso remove o bloqueio absoluto do GOAL-003. A pendência permanece **PARCIAL** porque o corpus ainda não é exaustivo e outros históricos/arquivos podem acrescentar evidência ou contraevidência.
