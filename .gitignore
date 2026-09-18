@@ -1,0 +1,29 @@
+# Segredos e credenciais locais (nunca versionar)
+.env
+.env.*
+!.env.example
+!.env.sample
+.secrets/
+secrets/
+credentials/
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*-service-account.json
+service-account*.json
+
+# Configuracao e estado exclusivamente locais
+.local/
+.envrc
+.vscode/*.local
+
+# Artefatos Python gerados localmente
+__pycache__/
+*.py[cod]
+
+# Artefatos temporarios
+*.log
+.DS_Store
+Thumbs.db

@@ -1,9 +1,9 @@
 # GOAL-005 — Relações, dependências e transferências
 
-**Status:** PREPARADO — NÃO LIBERADO  
-**Executor alvo:** QUALQUER EXECUTOR AUTORIZADO  
-**Dependência:** GOAL-004 concluído e validado  
-**Sequência:** 005 → 006 → 007  
+**Status:** CONCLUÍDO
+**Executor alvo:** QUALQUER EXECUTOR AUTORIZADO
+**Dependência:** GOAL-004 concluído e validado
+**Sequência:** 005 → 006 → 007
 **Modo:** EXECUTE + VALIDATE
 
 ## Intent
@@ -78,10 +78,10 @@ O resultado deve permitir responder:
 - quais relações não podem ser promovidas e por quê.
 
 Deve preservar:
-`coocorrência ≠ relação`;  
-`sequência ≠ causalidade`;  
-`dependência técnica ≠ pré-requisito pedagógico`;  
-`reaparecimento ≠ transferência pessoal`;  
+`coocorrência ≠ relação`;
+`sequência ≠ causalidade`;
+`dependência técnica ≠ pré-requisito pedagógico`;
+`reaparecimento ≠ transferência pessoal`;
 `artefato ≠ autoria`.
 
 ## Validação

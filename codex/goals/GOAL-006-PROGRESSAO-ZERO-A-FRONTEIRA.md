@@ -1,9 +1,9 @@
 # GOAL-006 — Progressão do zero à fronteira atual
 
-**Status:** PREPARADO — NÃO LIBERADO  
-**Executor alvo:** QUALQUER EXECUTOR AUTORIZADO  
-**Dependência:** GOAL-005 CONCLUÍDO e validado  
-**Sequência:** 005 → 006 → 007  
+**Status:** CONCLUÍDO
+**Executor alvo:** QUALQUER EXECUTOR AUTORIZADO
+**Dependência:** GOAL-005 CONCLUÍDO e validado
+**Sequência:** 005 → 006 → 007
 **Modo:** EXECUTE + VALIDATE
 
 ## Intent

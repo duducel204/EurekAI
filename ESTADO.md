@@ -26,12 +26,12 @@ Não gravar aqui um SHA como “versão atual permanente”. O agente deve consu
 - GOAL-002 — concluído
 - GOAL-003 — concluído como mineração inicial; ingestão incremental continua
 - GOAL-004 — concluído
-- GOAL-005 — preparado, não liberado
-- GOAL-006 — preparado, condicionado ao GOAL-005 concluído
-- GOAL-007 — preparado, condicionado ao GOAL-006 concluído
+- GOAL-005 — concluído
+- GOAL-006 — concluído
+- GOAL-007 — concluído
 - GOAL-008–010 — rascunhos/sementes conforme roadmap
 
-A sequência 005→006→007 está preparada, mas **ainda não foi liberada para execução**.
+A sequência 005→006→007 foi completamente liberada, executada e validada.
 
 ## Regra de trabalho multiagente
 Ao iniciar trabalho, registrar o SHA de `origin/main` usado como base.
