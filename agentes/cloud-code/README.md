@@ -2,11 +2,20 @@
 
 Use o ambiente Google para colaborar no **mesmo** EurekAI, não para criar uma variante do projeto nem reorganizar o repositório segundo convenções próprias da ferramenta.
 
+## Reinício de sessão
+O Cloud Code/Gemini Code Assist deve assumir que o chat anterior pode ter sido perdido.
+
+Antes de qualquer trabalho material:
+1. leia `/AGENTS.md`;
+2. leia `/GEMINI.md`;
+3. leia este arquivo;
+4. leia o README da área afetada e o Goal/INV aplicável;
+5. sincronize `main` e verifique PRs/branches/commits recentes.
+
 ## Antes de editar
-1. Leia `/AGENTS.md`.
-2. Identifique o Goal, investigação ou pedido humano atual.
-3. Identifique a zona correta de escrita.
-4. Se a tarefa for apenas configurar Cloud Code/Gemini, prefira `.gemini/`, `.vscode/` ou configuração local — não altere o corpus.
+1. Identifique o Goal, investigação ou pedido humano atual.
+2. Identifique a zona correta de escrita.
+3. Se a tarefa for apenas configurar Cloud Code/Gemini, prefira `.gemini/`, `.vscode/` ou configuração local — não altere o corpus.
 
 ## Onde escrever
 - configuração/skills do Gemini → `.gemini/`;
@@ -16,6 +25,10 @@ Use o ambiente Google para colaborar no **mesmo** EurekAI, não para criar uma v
 - conteúdo do projeto → somente na pasta semântica correspondente e com evidência/decisão suficiente.
 
 **`contexto/` não é pasta de scripts.** É memória contextual do projeto.
+
+`codex/retornos/` é reservado ao workflow Codex, salvo autorização explícita.
+
+`conhecimento/` organiza conhecimento estruturado; `pedagogia/` é a camada que o transforma em aprendizagem.
 
 ## Google Cloud
 Diferencie sempre:
