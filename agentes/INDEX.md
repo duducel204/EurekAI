@@ -10,6 +10,12 @@ Este é o índice de entrada para colaboração multiagente no EurekAI.
 5. roadmap + Goal/INV aplicável;
 6. commits/PRs recentes antes de agir.
 
+## Gates de execução
+- `READY_FOR_CODEX` — nome legado; significa **pronto para executor autorizado**.
+- `CONCLUÍDO` — etapa executada e validada.
+
+Para sequências automáticas, leia `codex/goals/PROTOCOLO-EXECUCAO-SEQUENCIAL.md`. Um próximo Goal só atravessa o gate de entrada após a dependência anterior atravessar o gate de saída.
+
 ## Quem faz o quê
 - **Codex:** execução sistemática de Goals quando explicitamente liberados.
 - **Gemini CLI:** exploração, pesquisa, análise e capacidades Google/MCP quando autorizadas.
@@ -24,7 +30,8 @@ Papéis não são exclusividades. O escopo autorizado e o estado do Goal prevale
 - `.vscode/` → configuração compartilhável do editor
 - `ferramentas/` → scripts/utilitários compartilhados
 - `codex/goals/` → planejamento executável
-- `codex/retornos/` → retornos do workflow Codex, salvo autorização explícita
+- `execucoes/` → relatórios/handoffs genéricos de execução
+- `codex/retornos/` → histórico/retornos do workflow Codex
 - `contexto/` → memória contextual, não scripts
 - `fontes/`, `experiencias/`, `conhecimento/`, `decisoes/`, `hipoteses/`, `descobertas/`, `erros/`, `investigacao/`, `mapa-do-conhecimento/`, `pedagogia/` → corpus e camadas semânticas
 
