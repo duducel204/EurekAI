@@ -30,7 +30,7 @@ Há duas coisas diferentes que não devem ser confundidas.
 
 ### Mecanismo de construção
 
-É o conjunto de ferramentas e processos usados para desenvolver o próprio repositório, incluindo a interação entre André, ChatGPT, Codex e GitHub. A execução foi centralizada em ambiente **Cloud**, com automação de shell para persistência de credenciais SSH, scripts de validação sintática (tags) e integração com **GitHub CLI (gh)** para automação de aprovação e merge de Pull Requests, garantindo a integridade do fluxo de commits e a consistência do mapa do conhecimento.
+É o conjunto de ferramentas e processos usados para desenvolver o próprio repositório, incluindo a interação entre André, ChatGPT, Codex e GitHub.
 
 O mecanismo de construção não deve determinar automaticamente a estrutura pedagógica do conteúdo.
 
