@@ -3,7 +3,20 @@
 Este é o ponto de entrada para qualquer agente de IA que trabalhe no EurekAI.
 
 ## Missão
-Continuar o projeto sem depender da conversa que originou o trabalho. O GitHub é o estado canônico; sessões, prompts, memórias e configurações locais dos agentes são contexto auxiliar.
+Continuar o projeto sem depender da conversa que originou o trabalho. O GitHub é o estado canônico; sessões, prompts, memórias e configurações locais dos agentes são contexto auxiliar e podem desaparecer a qualquer momento.
+
+## Regra de reinício de sessão
+**Nenhum agente deve presumir memória entre sessões.**
+
+Ao iniciar uma nova sessão, reabrir o workspace ou perder contexto:
+1. leia este arquivo;
+2. leia o adaptador específico do seu agente;
+3. leia o README da área afetada;
+4. consulte `codex/goals/ROADMAP-GOALS.md` e o Goal/INV aplicável;
+5. sincronize `main`;
+6. verifique PRs, branches, retornos e commits recentes antes de agir.
+
+A sessão nunca é a fonte de verdade. O repositório deve conter contexto suficiente para reconstruir o estado operacional.
 
 ## Antes de agir
 1. Leia este arquivo e o README da área afetada.
@@ -42,8 +55,12 @@ Não converta exposição, frequência, capacidade de ferramenta ou código exis
 ## Arquitetura de conhecimento
 Preferir corpus único + tags + consultas/lentes. Não criar cópias por agente, tecnologia ou categoria. Relações explícitas devem acrescentar significado que tags não expressem.
 
+**`conhecimento/` contém conhecimento estruturado. `pedagogia/` contém a transformação desse conhecimento em progressão, ensino, explicação, exercícios e outras formas de aprendizagem. Não confundir as duas camadas.**
+
 ## Goals
 `READY_FOR_CODEX` é estado operacional, não comentário. Um executor deve realizar apenas Goal autorizado, validar e produzir retorno auditável; não avançar autonomamente ao próximo Goal. Outros agentes podem investigar/preparar material sem falsificar o estado do Goal.
+
+**`codex/retornos/` pertence ao workflow de execução dos Goals do Codex. Outros agentes só devem escrever ali quando um Goal ou instrução explícita autorizar sua participação naquele retorno.**
 
 ## Multiagente
 Codex, Gemini CLI, Cloud Code/Gemini Code Assist, ChatGPT e futuros agentes podem ter especialidades diferentes. Nenhum agente possui uma “verdade própria”: descobertas retornam ao GitHub por evidência, documento ou PR apropriado.
