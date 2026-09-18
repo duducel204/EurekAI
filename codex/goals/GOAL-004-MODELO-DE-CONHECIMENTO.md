@@ -1,8 +1,8 @@
 # GOAL-004 — Modelar o conhecimento atual
 
-**Status:** READY_FOR_CODEX
+**Status:** CONCLUÍDO
 **Dependência:** GOAL-003 mineração inicial concluída
-**Modo:** EXECUTE + VALIDATE
+**Modo:** EXECUTADO + VALIDADO
 
 ## Intent
 Transformar o inventário existente em um modelo simples e navegável do conhecimento observado, sem classificar domínio e sem impor taxonomia definitiva.
