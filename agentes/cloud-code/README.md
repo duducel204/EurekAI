@@ -6,11 +6,11 @@ Use o ambiente Google para colaborar no **mesmo** EurekAI, não para criar uma v
 O Cloud Code/Gemini Code Assist deve assumir que o chat anterior pode ter sido perdido.
 
 Antes de qualquer trabalho material:
-1. leia `/AGENTS.md`;
-2. leia `/GEMINI.md`;
-3. leia este arquivo;
+1. execute `git fetch origin` e confirme o HEAD de `origin/main`;
+2. leia `/ESTADO.md`, `/AGENTS.md` e `/agentes/INDEX.md`;
+3. leia `/GEMINI.md` e este arquivo;
 4. leia o README da área afetada e o Goal/INV aplicável;
-5. sincronize `main` e verifique PRs/branches/commits recentes.
+5. registre a base usada e verifique PRs/branches/commits recentes.
 
 ## Antes de editar
 1. Identifique o Goal, investigação ou pedido humano atual.
@@ -38,6 +38,8 @@ A passagem entre esses estados exige evidência ou decisão explícita. Não reg
 
 ## Git
 Não fazer `git add .` indiscriminadamente, não aprovar o próprio PR e não habilitar auto-merge sem autorização explícita. Mudanças amplas de infraestrutura devem preferir branch/PR auditável.
+
+Antes de commit, push ou PR, execute novo `git fetch origin` e compare `origin/main` com a base registrada. Se houver avanço, revise o delta, verifique sobreposição semântica, reconcilie/rebase conforme necessário e refaça as validações antes de publicar.
 
 ## Handoff
 Toda conclusão reutilizável por outro agente deve voltar ao GitHub na estrutura canônica e com procedência suficiente para auditoria. Configuração puramente local não precisa virar conhecimento.
