@@ -1,59 +1,69 @@
 # GOAL-003 — Mineração inicial e inventário de evidências
 
-**Status:** READY_AFTER_GOAL_002_VALIDATION
-**Dependência:** GOAL-002 concluído e validado
+**Status:** CONCLUÍDO COMO MINERAÇÃO INICIAL / MINERAÇÃO CONTÍNUA PODE PROSSEGUIR  
+**Dependência:** GOAL-002 concluído e validado  
 **Modo:** EXECUTE + VALIDATE
 
 ## Intent
-Usar somente fontes reais disponíveis/autorizadas para produzir a primeira mineração sistemática de evidências sobre a trajetória de conhecimento de André. O resultado não é classificação final do que André sabe; é inventário auditável de evidências, lacunas, tensões e candidatos a conhecimento.
-
-## Regra de ativação
-Antes de executar, verificar o retorno do GOAL-002. Se aquisição/investigação não estiver funcional ou não houver corpus minimamente útil, não improvisar: registrar bloqueio e criar/atualizar pendências.
+Produzir inventário auditável da trajetória de conhecimento de André a partir de fontes reais/autorizadas. Não classificar domínio.
 
 ## Pergunta central
-Quais pegadas observáveis existem de que André descobriu, perguntou, recebeu explicação, tentou, configurou, usou, errou, diagnosticou, resolveu, reaplicou, comparou, explicou, construiu, decidiu, mudou de direção, demonstrou conhecimento tácito ou apresentou dúvida/lacuna?
+Quais pegadas observáveis existem de descoberta, pergunta, tentativa, configuração, uso, erro, diagnóstico, solução, reaplicação, comparação, explicação, construção, decisão, mudança de direção, conhecimento tácito, dúvida ou lacuna?
 
-## In Scope
-- Fixar commit/base e lote.
-- Minerar somente fontes acessíveis/autorizadas.
-- Extrair evidências com procedência reproduzível.
-- Agrupar por tópicos somente com suporte.
-- Detectar reaplicação em contextos distintos.
-- Separar erros, diagnósticos e soluções.
-- Registrar contraevidência, incerteza e tensões.
-- Detectar conhecimento possivelmente tácito sem completá-lo.
-- Identificar lacunas e transformá-las em pendências materiais.
-- Produzir inventário compacto para revisão.
-- Não escrever trilha pedagógica nem capítulos.
+## Unidade mínima
+Preservar quando disponível: ID; tags; evento; descrição objetiva; fonte/lote/localizador; data; ator; contexto/projeto; resultado; assistência externa/IA; interpretação; limites; estado epistemológico; confirmação; relações; derivação/linhagem.
 
-## Modelo de evidência
-Preservar quando disponível: ID; tópicos candidatos; evento; descrição objetiva; fonte/localizador; data; ator; resolução de identidade; contexto/projeto; resultado; assistência externa/IA; interpretação; limites; tipo epistemológico; confirmação; relações; derivação/linhagem.
+Vocabulário observacional: EXPOSIÇÃO, PERGUNTOU, TENTOU, USOU, CONFIGUROU, ERROU, DIAGNOSTICOU, RESOLVEU, REAPLICOU, EXPLICOU, CONSTRUIU, DECIDIU.
 
-## Vocabulário observacional
-EXPOSIÇÃO, PERGUNTOU, TENTOU, USOU, CONFIGUROU, ERROU, DIAGNOSTICOU, RESOLVEU, REAPLICOU, EXPLICOU, CONSTRUIU, DECIDIU.
+## Tags como matriz simples
+Aplicar [INDEX-TAGS](../../mapa-do-conhecimento/INDEX-TAGS.md).
 
-Não é ranking de domínio. A escala DESCOBRI → ENTENDI → USEI → RESOLVI → DOMINO permanece hipótese futura; não concluir DOMINO neste Goal.
+Preferir:
+`E-xxx | Tags: #api #erro #diagnostico #experiencia`
 
-## Agrupamento
-Evitar arquivo por frase. Preferir unidades agregadoras auditáveis por tema, projeto ou lote, mantendo referências individuais. Não duplicar evidência em categorias; usar relações.
+a duplicar a mesma evidência em estruturas separadas.
 
-## Inferências permitidas
-Pergunta sustenta exposição naquele momento. Configuração documentada sustenta uso/configuração naquele contexto. Diagnóstico seguido de correção verificável sustenta diagnóstico/solução naquele contexto. Reaplicação posterior é evidência adicional. Explicação própria consistente sustenta articulação.
+Tags devem conectar:
+- assunto/tecnologia;
+- natureza: evidência, artefato, documento, ideia, plano etc.;
+- evento/trajetória;
+- cognição/aprendizagem;
+- participação humano–IA.
+
+Uma combinação de tags funciona como consulta/lente. Relação explícita continua disponível quando a conexão não puder ser representada adequadamente por tags.
+
+## Mineração com derivação
+Aplicar [DIRETRIZ-TRANSVERSAL-DERIVACAO-REUTILIZAVEL](DIRETRIZ-TRANSVERSAL-DERIVACAO-REUTILIZAVEL.md).
+
+Ao ler uma fonte, quando sustentado, extrair na mesma passagem:
+1. evidência observável;
+2. tags;
+3. sequência/trajectória;
+4. relações candidatas;
+5. transição cognitiva;
+6. matéria-prima pedagógica reutilizável;
+7. possíveis destinos em Goals futuros.
+
+Observar especialmente:
+- conceito antes do nome;
+- nome antes da compreensão;
+- transição de modelo mental;
+- reaprendizagem/retenção;
+- transferência entre projetos;
+- conhecimento tácito;
+- tensão/contraevidência;
+- autoria cognitiva humano–IA.
+
+Essas derivações permanecem candidatas; não executam Goals posteriores.
+
+## Escrita em alta vazão
+Ler uma vez e preservar material reutilizável. Acelerar por lote, deduplicação, atualização incremental, validação mecânica e paralelização. Não acelerar por inferência sem evidência, classificação de domínio ou proliferação de arquivos.
 
 ## Inferências proibidas
-Não afirmar domínio; não afirmar desconhecimento por falta de evidência; não presumir autoria intelectual por commit; não presumir compreensão profunda por código possivelmente gerado por IA; não aplicar confirmação pontual em bloco.
+Não afirmar domínio; não afirmar desconhecimento por ausência; não presumir autoria intelectual por commit; não presumir compreensão profunda por código possivelmente gerado por IA; não tratar tag como conclusão.
 
-## Pendências
-Criar/atualizar somente quando investigação puder melhorar materialmente o inventário: outras conversas ChatGPT, outras IAs fornecidas, outro repositório, handoff/documento, confirmação específica de André ou documentação oficial para validar aspecto técnico.
+## Continuidade
+A mineração inicial está concluída, mas novos lotes podem continuar entrando por `fontes/` e `investigacao/` enquanto Goals posteriores avançam. Não exigir mineração exaustiva antes da modelagem.
 
-## Deliverables
-Manifesto do corpus; inventário inicial; tópicos candidatos provisórios; relações; lacunas/tensões; pendências; cobertura/limitações; relatório em codex/retornos/.
-
-## Acceptance Criteria
-Toda afirmação material rastreável; ausência não vira desconhecimento; eventos não achatados em sabe/não sabe; IA não atribuída automaticamente; duplicatas não corroboram artificialmente; pendências preservadas; inventário permite desenhar próximo modelo sem reler todo corpus; sem taxonomia definitiva, trilha ou capítulos.
-
-## Stop Conditions
-Aplicar GOAL-001 e GOAL-002. Corpus insuficiente deve gerar cobertura explícita e fila de investigação, nunca compensação com conhecimento genérico.
-
-## Return
-Commit/base; corpus; quantidade/tipos de evidências; tópicos candidatos; relações; lacunas/tensões; pendências; limitações; arquivos alterados; recomendação baseada em evidências. Não executar Goals posteriores.
+## Resultado histórico
+O primeiro inventário e corpus auditável foram produzidos. GOAL-003 serve agora como contrato para mineração contínua e incremental.
