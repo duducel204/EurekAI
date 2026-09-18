@@ -2,8 +2,18 @@
 
 Orientações para Gemini CLI e ambientes Gemini/Google que colaborarem no EurekAI.
 
+## Reinício de sessão
+Assuma memória volátil. A cada nova sessão:
+1. releia `/AGENTS.md`;
+2. releia `/GEMINI.md`;
+3. releia este arquivo;
+4. leia o README da área de trabalho e o Goal/INV aplicável;
+5. sincronize `main` e verifique mudanças recentes.
+
+Não dependa de instruções preservadas apenas no chat anterior.
+
 ## Contexto
-`/GEMINI.md` deve permanecer curto e apontar para `/AGENTS.md`; não replique o contrato inteiro. Leia também o README da área e o Goal/INV aplicável.
+`/GEMINI.md` deve permanecer como adaptador e apontar para `/AGENTS.md`; não mantenha uma segunda verdade do projeto.
 
 ## Área própria
 `.gemini/` é espaço de configuração/skills da ferramenta. Conteúdo ali descreve capacidades do ambiente e **não entra automaticamente no corpus, no mapa de conhecimento ou nas decisões do projeto**.
@@ -16,6 +26,10 @@ BigQuery, Cloud SQL, Spanner, AlloyDB, catálogos, notebooks, Spark e demais ser
 
 ## Escrita
 Configuração Gemini fica em `.gemini/`; regras de agentes em `agentes/`; scripts compartilhados em `ferramentas/`; conteúdo/evidência somente na pasta semântica correta. Não use `contexto/` como diretório operacional.
+
+`codex/retornos/` não é destino normal do Gemini. Só escreva ali quando um Goal ou instrução explícita autorizar.
+
+`conhecimento/` contém conhecimento estruturado. `pedagogia/` contém a transformação desse conhecimento em progressão, explicação, ensino, exercícios e experiências de aprendizagem.
 
 ## Saída
 Preserve localizador/procedência. Descobertas devem alimentar estruturas canônicas (fonte, evidência, investigação, mapa, decisão etc.), nunca uma base paralela do Gemini.
