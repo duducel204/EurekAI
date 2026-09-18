@@ -7,15 +7,15 @@ Goals posteriores devem ser refinados pelas evidências dos anteriores. Não exe
 
 ## Ciclo
 - GOAL-001 — Contrato operacional e inspeção — CONCLUÍDO.
-- GOAL-002 — Aquisição de evidências e fila de investigação — EXECUTÁVEL.
-- GOAL-003 — Mineração inicial e inventário — após validação do GOAL-002.
-- GOAL-004 — Modelar o conhecimento atual — PREVISTO.
-- GOAL-005 — Construir relações e dependências — PREVISTO.
-- GOAL-006 — Progressão do zero à fronteira atual — PREVISTO.
-- GOAL-007 — Engenharia pedagógica atemporal — PREVISTO.
-- GOAL-008 — Produção sistemática do conteúdo — PREVISTO.
-- GOAL-009 — Auditoria, validação e correção — PREVISTO.
-- GOAL-010 — Ingestão contínua e evolução — PREVISTO.
+- GOAL-002 — Aquisição de evidências e fila de investigação — CONCLUÍDO.
+- GOAL-003 — Mineração inicial e inventário — CONCLUÍDO COMO MINERAÇÃO INICIAL; ingestão incremental continua.
+- GOAL-004 — Modelar o conhecimento atual — READY_FOR_CODEX.
+- GOAL-005 — Construir relações e dependências — DRAFT_EVOLUTIVO; revisar após GOAL-004.
+- GOAL-006 — Progressão do zero à fronteira atual — SEED_DRAFT.
+- GOAL-007 — Engenharia pedagógica atemporal — SEED_DRAFT.
+- GOAL-008 — Produção sistemática do conteúdo — SEED_DRAFT.
+- GOAL-009 — Auditoria, validação e correção — SEED_DRAFT.
+- GOAL-010 — Ingestão contínua e evolução — SEED_DRAFT.
 
 ## Macrofluxo
 fontes históricas → aquisição/investigação → evidências → inventário → modelo do conhecimento → relações/dependências → progressão → engenharia pedagógica → conteúdo → auditoria/validação → evolução contínua.
@@ -32,3 +32,6 @@ A partir do GOAL-003, aplicar [DIRETRIZ-TRANSVERSAL-DERIVACAO-REUTILIZAVEL.md](D
 Observar especialmente conceito antes do nome, nome antes da compreensão, transições de modelo mental, retenção/reaprendizagem, transferência entre projetos, conhecimento tácito e autoria cognitiva humano–IA.
 
 A hipótese de três mapas — conceitual, histórico e cognitivo — permanece aberta para teste; não é arquitetura canonizada.
+
+## Pipeline sobreposto
+Enquanto Codex executa o Goal N, planejamento pode amadurecer N+1 e registrar sementes de N+2...N+k. Somente N deve estar executável quando depende de resultado ainda não observado; os posteriores permanecem rascunhos explicitamente revisáveis.
