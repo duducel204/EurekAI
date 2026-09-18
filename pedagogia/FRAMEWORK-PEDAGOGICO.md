@@ -1,30 +1,52 @@
 # Framework de Engenharia Pedagógica Atemporal
 
 **Estado:** CONCLUÍDO (Derivado do GOAL-007, operacionalizando o arcabouço de `pedagogia/PROGRESSAO-001.md`)
-**Diretriz Fundamental:** Compreensão estrutural e intuitiva antes da nomenclatura técnica, preservando rigor absoluto.
+**Diretriz Fundamental:** Compreensão estrutural e intuitiva antes da nomenclatura técnica quando isso ajudar, preservando rigor e procedência.
 
-## 1. O Protocolo de Transformação Causal
-Toda unidade de transmissão de conhecimento gerada para o EurekAI deve estruturar-se sob a seguinte esteira de conversão de conceitos:
+## 1. Protocolo de Transformação Pedagógica
+
+Uma unidade pode usar, adaptar ou alternar a seguinte sequência:
 
 $$\text{Intuição Prática} \longrightarrow \text{Modelo Mental/Analogia} \longrightarrow \text{Mecanismo Invariante} \longrightarrow \text{Terminologia Técnica} \longrightarrow \text{Aplicação/Experimento}$$
 
-## 2. Separação Rígida: Mecanismo Atemporal vs. Implementação Efêmera
-Para evitar a obsolescência precoce do corpus de aprendizado, a engenharia pedagógica isola o coração conceitual do ferramental de mercado.
+A sequência é repertório de transformação, não cadeia causal nem template obrigatório. Quando uma representação não funcionar, deve-se trocar analogia, exemplo, profundidade ou experimento sem alterar o mecanismo técnico central.
 
-| Dimensão Atemporal (O Mecanismo) | Instanciação Versionada (A Ferramenta) | Exemplo Prático no Corpus |
+## 2. Separação: Mecanismo Atemporal vs. Implementação Efêmera
+
+Para reduzir obsolescência, separar o mecanismo conceitual da ferramenta usada como exemplo.
+
+| Dimensão atemporal | Instanciação versionada | Exemplo no corpus |
 | --- | --- | --- |
-| **Isolamento de Contexto:** Divisão física de processos para garantir resiliência e evitar contaminação de dependências. | Repositórios Git separados, escopos Windows vs. Termux Linux. | `E-014` |
-| **Protocolo de Mensageria Comum:** Uma interface neutra que traduz intenções entre dois sistemas isolados que falam línguas distintas. | Model Context Protocol (MCP), chamadas via JSON-RPC. | `E-015` |
-| **Soberania Computacional Local:** A restrição intencional de execução de dados às bordas físicas do hardware para blindagem de privacidade. | Configurações específicas de Sandbox, binários offline no Termux Android. | `E-017`, `E-018` |
+| **Isolamento de contexto:** separação de responsabilidades/ambientes para reduzir acoplamento e interferência entre dependências. | Repositórios Git separados e contextos Windows/Termux. | `E-014` |
+| **Interface/protocolo entre contextos:** comunicação padronizada entre componentes separados. | MCP no contexto testado/documentado. | `E-015`, `E-016` |
+| **Processamento local como direção arquitetural:** manter processamento sob controle local quando esse requisito existir. | Direção documentada para processamento local e tradução offline ainda pendente. | `E-017`, `E-018` |
 
-## 3. Critérios para Uso Didático de Falhas Reais
-Erros e lacunas materiais (como a impossibilidade de tradução offline documentada em `E-018` ou des alinhamentos de commits em `T-001`) não devem ser limpos ou omitidos do ensino. Eles serão aplicados como instrumentação de aprendizado técnico sob as seguintes regras:
-*   **O Erro como Sintoma Arquitetural:** O erro deve demonstrar o limite de uma escolha técnica, nunca ser exposto como uma falha pessoal isolada.
-*   **Rastreabilidade:** Qualquer exemplo de debugging inserido no material didático deve conter o ponteiro exato para a ID da experiência que o gerou, garantindo auditoria de procedência histórica.
+Os exemplos não transformam automaticamente a ferramenta citada em única implementação possível do mecanismo.
 
-## 4. Estrutura Mínima para Unidades de Conteúdo (Diretriz para o GOAL-008)
-As futuras lições produzidas sistematicamente deverão preencher obrigatoriamente os seguintes metadados em seus blocos Markdown:
-1.  **Objetivo de Compreensão:** Qual intuição o aluno reterá.
-2.  **O Vínculo de Evidência:** IDs do repositório (`E-xxx`) que ancoram a realidade técnica ensinada.
-3.  **A Analogia Atemporal:** A ponte de linguagem simples (ex: explicar MCP usando a analogia de um tradutor diplomático entre dois países que não partilham o mesmo alfabeto).
-4.  **O Experimento Controlado:** Cenário prático reproduzível de teste baseado em histórico real.
+## 3. Critérios para Uso Didático de Falhas e Lacunas Reais
+
+Falhas, tensões e lacunas só podem virar material didático com procedência suficiente.
+
+* **Estado correto:** distinguir erro observado, relato de erro, pendência, tensão documental e hipótese; não chamar uma pendência de impossibilidade.
+* **O erro/lacuna como caso técnico:** demonstrar mecanismo ou limite técnico sem convertê-lo em julgamento pessoal.
+* **Rastreabilidade:** todo caso real deve apontar para a evidência/experiência que o sustenta e preservar seus limites.
+* **Representação alternativa:** se o caso não destravar compreensão, trocar analogia, exemplo ou experimento sem mudar o conceito central.
+
+## 4. Estrutura Mínima para Unidades de Conteúdo — Diretriz para GOAL-008
+
+As futuras unidades devem registrar, no mínimo:
+
+1. **Objetivo de compreensão:** qual mecanismo/intuição se pretende transmitir.
+2. **Vínculo de evidência:** IDs que ancoram exemplos reais; quando a parte for puramente pedagógica, rotulá-la como hipótese/representação.
+3. **Representação inicial:** analogia, comparação ou modelo mental apropriado.
+4. **Mecanismo e terminologia:** explicação tecnicamente precisa, separada da analogia.
+5. **Experimento/aplicação:** cenário reproduzível quando aplicável.
+6. **Alternativa de representação:** pelo menos uma forma de reexplicar o mesmo mecanismo quando necessário.
+7. **Temporalidade:** indicar o que é mecanismo atemporal e o que depende de ferramenta/versão.
+
+## 5. Teste contra as trilhas atuais
+
+* **Trilha A:** o framework separa a direção atemporal de controle/processamento local do exemplo versionado Termux/tradução offline e mantém a ordem como hipótese pedagógica.
+* **Trilha B:** o mesmo framework separa isolamento/comunicação/verificação como mecanismos dos exemplos Git/MCP/CI, sem converter sua sequência contextual em pré-requisito obrigatório.
+
+Assim, o contrato é reutilizável nas duas trilhas atuais sem universalizar as relações observadas no corpus.
