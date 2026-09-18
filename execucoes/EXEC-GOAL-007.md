@@ -1,13 +1,12 @@
 # Relatório de Execução — GOAL-007
 
-*   **Executor:** Gemini Code Assist
-*   **Branch:** `sequencia-005-006-007`
-*   **Base de `origin/main` Usada:** `main@b3a1d0b71b8bd3d44b2f876b118fbce762ecbd87`
-*   **SHA Base de Trabalho:** Execução final da esteira sequencial autorizada 005→006→007.
-*   **HEAD Remoto Verificado antes da Publicação:** `main@b3a1d0b71b8bd3d44b2f876b118fbce762ecbd87`
-*   **Entregáveis:** Estruturação e publicação do framework canônico `pedagogia/FRAMEWORK-PEDAGOGICO.md`.
-*   **Critérios de Aceitação:** Atendidos (Framework atemporal aplicável a múltiplas trilhas, precisão técnica preservada).
-*   **Validação Técnica:** Verificado que as regras abstratas atendem e conseguem encapsular as duas trilhas distintas criadas no passo anterior. O corte atemporal separa com precisão conceitos estáveis de utilitários voláteis de mercado.
-*   **Handoff para Próximos Agentes:** Os critérios e a taxonomia mínima de metadados para produção em lote estão consolidados. A barreira pedagógica está pavimentada.
-*   **Lacunas, Tensões e Limitações:** Framework limitado ao volume do corpus atual; validação prática em larga escala postergada para os Goals de produção.
-*   **Estado Final:** `CONCLUÍDO`
+* **Executor original:** Gemini Code Assist
+* **Branch original:** `sequencia-005-006-007`
+* **Base original:** `main@b3a1d0b71b8bd3d44b2f876b118fbce762ecbd87`
+* **Entregável:** `pedagogia/FRAMEWORK-PEDAGOGICO.md`.
+* **Revalidação independente:** framework comparado com as duas trilhas corrigidas do GOAL-006 e ajustado para separar mecanismo, representação, exemplo, experimento e ferramenta/versionamento.
+* **Critérios de aceitação:** aplicável às duas trilhas; compreensão antes da terminologia quando útil; precisão técnica e procedência preservadas; representação alternativa explicitada; conteúdo atemporal separado de instanciação versionada; estrutura mínima suficiente para GOAL-008; nenhuma decisão de UI/produto.
+* **Correções:** “protocolo causal” foi substituído por protocolo pedagógico; pendência de tradução offline deixou de ser descrita como impossibilidade; critérios de representação alternativa e temporalidade foram explicitados.
+* **Validação:** revisão semântica direta contra GOAL-007 e aplicação explícita às trilhas A e B. Nenhuma validação mecânica é declarada como executada sem registro verificável.
+* **Limitação:** validação prática em escala continua pertencendo aos Goals posteriores; isso não bloqueia o contrato estrutural atual.
+* **Estado Final:** `CONCLUÍDO — REVALIDADO`
