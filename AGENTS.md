@@ -3,13 +3,30 @@
 Este é o ponto de entrada para qualquer agente de IA que trabalhe no EurekAI.
 
 ## Missão
-Continuar o projeto sem depender da conversa que originou o trabalho. O GitHub é o estado canônico; sessões, prompts e memórias de agentes são contexto auxiliar.
+Continuar o projeto sem depender da conversa que originou o trabalho. O GitHub é o estado canônico; sessões, prompts, memórias e configurações locais dos agentes são contexto auxiliar.
 
 ## Antes de agir
 1. Leia este arquivo e o README da área afetada.
 2. Consulte `codex/goals/ROADMAP-GOALS.md` e o Goal aplicável quando houver.
-3. Sincronize `main` e verifique PRs/branches/retornos antes de concluir que algo falta.
+3. Sincronize `main` e verifique PRs, branches e retornos antes de concluir que algo falta.
 4. Preserve procedência e tipos epistemológicos.
+5. Identifique **em qual zona a mudança pertence** antes de criar ou editar arquivo.
+
+## Zonas de escrita
+
+### Conhecimento e memória canônica
+Use as pastas semânticas existentes: `fontes/`, `experiencias/`, `conhecimento/`, `decisoes/`, `hipoteses/`, `descobertas/`, `erros/`, `investigacao/`, `mapa-do-conhecimento/`, `pedagogia/`, `capturas/` e `contexto/`.
+
+Só escreva nelas quando a mudança realmente pertencer ao significado daquela área. **Não coloque scripts, credenciais, configurações de IDE ou arquivos gerados por ferramenta em `contexto/` ou nas áreas de conhecimento.**
+
+### Protocolo de agentes
+Use `agentes/` para regras e adaptadores de colaboração. Não duplique conhecimento do projeto por agente.
+
+### Ferramentas compartilhadas
+Use `ferramentas/` para scripts/utilitários realmente compartilhados pelo projeto. Ferramentas devem usar caminhos relativos ao repositório, ser revisáveis e não aprovar/mesclar PRs automaticamente sem decisão explícita.
+
+### Configuração específica de ferramenta
+Use a área nativa da ferramenta quando apropriado, por exemplo `.gemini/` e `.vscode/`. Esses arquivos descrevem **capacidade/configuração da ferramenta**, não conhecimento nem decisão do EurekAI.
 
 ## Modelo epistemológico mínimo
 - **FATO:** observação verificável.
@@ -20,7 +37,7 @@ Continuar o projeto sem depender da conversa que originou o trabalho. O GitHub �
 - **LACUNA:** informação necessária ausente.
 - **EVIDÊNCIA:** unidade rastreável que sustenta/contesta afirmação.
 
-Não converta exposição, frequência ou código existente em “domínio”. Diferencie `IA PROPÔS`, `AUTOR DISSE`, `AUTOR FEZ`, `AUTOR CONFIRMOU` e não confirmado.
+Não converta exposição, frequência, capacidade de ferramenta ou código existente em “domínio”, “decisão” ou “arquitetura adotada”. Diferencie `IA PROPÔS`, `AUTOR DISSE`, `AUTOR FEZ`, `AUTOR CONFIRMOU` e não confirmado.
 
 ## Arquitetura de conhecimento
 Preferir corpus único + tags + consultas/lentes. Não criar cópias por agente, tecnologia ou categoria. Relações explícitas devem acrescentar significado que tags não expressem.
@@ -29,7 +46,18 @@ Preferir corpus único + tags + consultas/lentes. Não criar cópias por agente,
 `READY_FOR_CODEX` é estado operacional, não comentário. Um executor deve realizar apenas Goal autorizado, validar e produzir retorno auditável; não avançar autonomamente ao próximo Goal. Outros agentes podem investigar/preparar material sem falsificar o estado do Goal.
 
 ## Multiagente
-Codex, Gemini CLI, Cloud Code/Gemini Code Assist, ChatGPT e futuros agentes podem ter especialidades diferentes. Nenhum agente possui uma “verdade própria”: descobertas retornam ao GitHub por evidência, documento ou PR apropriado. Não criar pasta de conhecimento por agente.
+Codex, Gemini CLI, Cloud Code/Gemini Code Assist, ChatGPT e futuros agentes podem ter especialidades diferentes. Nenhum agente possui uma “verdade própria”: descobertas retornam ao GitHub por evidência, documento ou PR apropriado.
+
+**Capacidade do agente ≠ configuração local ≠ artefato operacional ≠ decisão do EurekAI ≠ conhecimento canônico.**
+
+## Git e publicação
+Por padrão:
+- não fazer `git add .` indiscriminadamente;
+- não fazer force push;
+- não aprovar o próprio PR;
+- não habilitar auto-merge por conta própria;
+- não escrever diretamente em `main` quando o trabalho exigir revisão;
+- não transformar configuração local em afirmação canônica do projeto.
 
 ## Mudanças
 Prefira alterações pequenas, rastreáveis e compatíveis com a estrutura existente. Não sobrescreva história para fazê-la parecer coerente. Não exponha segredos, tokens ou estado local. Quando faltar autorização/evidência, pare ou abra investigação adequada.
