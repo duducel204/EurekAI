@@ -1,0 +1,33 @@
+# Inventário auditável complementar — lotes L-004 e L-005
+
+**GOAL-003; base EurekAI:** `main@3f88c0605b4ee21389383fac01d2617f549c5b51`  
+**Fonte:** [manifesto de corpus](../fontes/REGISTRO.md)  
+**Estado:** observações de artefatos; nenhuma classificação de domínio.
+
+## Método e alcance
+
+Foram examinados dois repositórios acessíveis, fixados nos commits indicados em L-004/L-005, além do resultado de uma execução de CI no mesmo commit de L-004. As datas abaixo são dos commits ou da CI, **não** necessariamente dos eventos descritos nos documentos. O ator verificável de commits é a conta GitHub `duducel204`; sua identidade civil, autoria intelectual de cada trecho e assistência de IA não foram resolvidas. Relato em documento, existência de código e execução de teste são evidências distintas. Não foi executado teste em Android nem mineração de conversas privadas neste lote.
+
+## Observações com localizador
+
+| ID | Evento e tópico candidato | Observação objetiva e fonte | Ator/data | Interpretação permitida e limite |
+| --- | --- | --- | --- | --- |
+| E-014 | DECIDIU / organização de projetos, MCP | O [README do Aindre Termux, linhas 34–36](https://github.com/duducel204/Aindre-termux-tradutor/blob/f29de5b2deb2efe4216a7dc39a0af29184f1ad7f/README.md#L34-L36) separa Termux/tradutor do MCP para Windows; o [commit de separação](https://github.com/duducel204/Aindre-termux-tradutor/commit/7ed6bd091ff567fc8518e5eb46ba504fe093539f) registra a mudança. | Conta `duducel204`; commit 2026-09-17. | Decisão **do projeto** e alteração versionada. Não prova quem concebeu a separação nem domínio de MCP. |
+| E-015 | CONSTRUIU / teste de ponte MCP | Há um [teste Python, linhas 10–21](https://github.com/duducel204/Aindre-termux-tradutor/blob/f29de5b2deb2efe4216a7dc39a0af29184f1ad7f/tests/test_mcp_server.py#L10-L21), chamado pelo [workflow, linhas 17–20](https://github.com/duducel204/Aindre-termux-tradutor/blob/f29de5b2deb2efe4216a7dc39a0af29184f1ad7f/.github/workflows/shell-tests.yml#L17-L20). A [execução de CI](https://github.com/duducel204/Aindre-termux-tradutor/actions/runs/35187509452) no mesmo commit concluiu com `success`. | Conta `duducel204` no commit; CI automática em 2026-09-17. | Demonstra artefato de teste e execução bem-sucedida no runner. Não comprova funcionamento no aparelho de André nem autoria intelectual do teste. |
+| E-016 | USOU / MCP e Termux — **relato** | [STATUS, linhas 16–26](https://github.com/duducel204/Aindre-termux-tradutor/blob/f29de5b2deb2efe4216a7dc39a0af29184f1ad7f/STATUS.md#L16-L26) relata chamada `termux_exec` com `exit_code: 0`. | Autor do trecho não resolvido; arquivo presente no commit de 2026-09-17; data da chamada desconhecida. | Evidência de **relato de validação** do projeto. Falta log da chamada para confirmar a execução real e o ator. |
+| E-017 | DECIDIU / privacidade e processamento local — **documento** | [DECISIONS, linhas 1–13](https://github.com/duducel204/Aindre-termux-tradutor/blob/f29de5b2deb2efe4216a7dc39a0af29184f1ad7f/DECISIONS.md#L1-L13) prioriza processamento local, limita persistência de áudio e exige wizard idempotente. | Autor do trecho não resolvido; documento no commit de 2026-09-17. | Direção documentada do projeto. Implementação efetiva e confirmação pessoal de André requerem outras fontes. |
+| E-018 | LACUNA / tradução offline | [STATUS, linhas 28–40](https://github.com/duducel204/Aindre-termux-tradutor/blob/f29de5b2deb2efe4216a7dc39a0af29184f1ad7f/STATUS.md#L28-L40) coloca tradução offline em “Não concluído”; [DECISIONS, linha 12](https://github.com/duducel204/Aindre-termux-tradutor/blob/f29de5b2deb2efe4216a7dc39a0af29184f1ad7f/DECISIONS.md#L12) a mantém em aberto. | Autores dos trechos não resolvidos; recorte do commit de 2026-09-17. | Contraevidência à leitura de que “tradutor local” já esteja completo. Documentos relacionados do mesmo projeto não são corroboração independente. |
+| E-019 | CONSTRUIU / governança multiagente — **artefatos** | A [árvore do DTGEapp](https://api.github.com/repos/duducel204/DTGEapp/git/trees/f5d476871dc925421a138a920516b9e93823a2fd?recursive=1) contém contratos, canonizações e documento de memória; a [MEMORIA, linhas 1–22](https://github.com/duducel204/DTGEapp/blob/f5d476871dc925421a138a920516b9e93823a2fd/MEMORIA_DREAMTEAM_v1.md#L1-L22) descreve o sistema. | Conta `duducel204` no commit de 2026-07-27; autores dos documentos não resolvidos. | Existência de artefatos de governança. Não comprova execução dos agentes, teste integrado nem contribuição individual de André. |
+
+## Relações, tensão e cobertura
+
+- **E-014 ↔ E-015/E-016:** a separação de projetos e a ponte Termux pertencem ao mesmo contexto. O teste em CI e o relato de uso em Termux têm ambientes distintos; não somar como duas provas da mesma execução.
+- **E-017 ↔ E-018:** a prioridade pelo processamento local coexiste com tradução offline não concluída. Direção e implementação devem permanecer separadas.
+- **E-019 ↔ inventário L-003 E-009:** o repositório corrobora a existência de documentos Dream Team, mas não os testes/correções específicos relatados no inventário anterior. Ver [auditoria](AUDITORIA-EVIDENCIAS-001.md).
+- **Tensão T-001:** o [README DTGEapp, linhas 23–28](https://github.com/duducel204/DTGEapp/blob/f5d476871dc925421a138a920516b9e93823a2fd/README.md#L23-L28) apresenta módulos Python como ativos, enquanto os arquivos com esses nomes não aparecem na [árvore desse commit](https://api.github.com/repos/duducel204/DTGEapp/git/trees/f5d476871dc925421a138a920516b9e93823a2fd?recursive=1). A [MEMORIA, linhas 36–48](https://github.com/duducel204/DTGEapp/blob/f5d476871dc925421a138a920516b9e93823a2fd/MEMORIA_DREAMTEAM_v1.md#L36-L48) relata testes e correções, mas também reconhece que integração ponta a ponta não foi executada. Pode haver arquivos fora desta árvore; o recorte não permite decidir funcionamento atual.
+
+**Cobertura:** seis observações E-014–E-019; 2 repositórios; 1 execução de CI. Tipos: 2 decisões/documentos de projeto, 1 teste com CI, 1 relato de uso, 1 lacuna, 1 conjunto de artefatos. Nenhuma observação resolve, por si, identidade de André, assistência de IA ou nível de conhecimento. Não há evidência suficiente de reaplicação **pessoal independente** entre projetos.
+
+## Próxima investigação material
+
+Recuperar log/artefato da chamada Termux e fontes originais dos testes/correções Dream Team, se disponíveis; obter localizadores por episódio para L-003; resolver relação entre conta GitHub, autores dos documentos e André antes de atribuições pessoais. Essas necessidades permanecem na [INV-001](../investigacao/pendencias/INV-001-CORPUS-HISTORICO.md), sem criar tickets por tema.
