@@ -1,26 +1,31 @@
 # Trilhas de Progressão Progressiva — Recorte P-001
 
 **Estado:** CONCLUÍDO (Derivado do GOAL-006, alimentado por R-001, R-002 e R-003)
-**Premissa:** Zero pressuposto conceitual. Separação explícita de dependências.
+**Premissa:** Zero pressuposto conceitual. Separação explícita entre relações observadas e escolhas pedagógicas.
 
 ## Trilha A: Soberania de Dados e Limitações Locais (Eixo Cognitivo: Intencionalidade)
 
-1.  **Ponto de Partida (Zero Pressuposto):** A necessidade humana elementar de privacidade. O conceito intuitivo de que dados confidenciais (como áudio ou texto pessoal) não devem trafegar em servidores de terceiros.
-2.  **A Tensão Prática (O Gancho):** Como usufruir de assistentes inteligentes sem abrir mão da custódia do dado? (Conexão com a diretriz declarada em `E-017`).
-3.  **O Mecanismo de Execução Sandbox:** Introdução ao conceito de computação de borda ou local utilizando ambientes autocontidos (Intuição baseada no contexto `#termux`).
-4.  **A Fronteira Atual / Lacuna Histórica:** A complexidade real de manter um sistema 100% isolado. Estudo de caso da pendência de tradução offline aberta (`E-018`), ilustrando que escolhas arquiteturais geram trade-offs de engenharia.
+1. **Ponto de Partida (Zero Pressuposto):** introduzir intuitivamente privacidade e custódia de dados.
+2. **A Tensão Prática (O Gancho):** como usufruir de assistentes inteligentes mantendo processamento/dados sob controle local? A direção de processamento local e privacidade está documentada em `E-017`.
+3. **Representação candidata:** apresentar computação local/na borda e ambientes autocontidos usando o contexto `#termux` como exemplo, não como pré-requisito demonstrado.
+4. **A Fronteira Atual / Lacuna Histórica:** usar a tradução offline ainda não concluída (`E-018`) como exemplo de diferença entre direção arquitetural e implementação efetiva.
 
-*   *Status de Dependência:* Vínculo cognitivo estabelecido a partir da relação **R-003**.
+* **Base factual:** R-003 sustenta coexistência contextual entre E-017 e E-018.
+* **Hipótese pedagógica:** a ordem acima é uma escolha didática candidata; R-003 não demonstra dependência técnica ou cognitiva entre seus passos.
 
 ## Trilha B: Isolamento de Ambientes e Pontes de Comunicação (Eixo Técnico: Engenharia)
 
-1.  **Ponto de Partida (Zero Pressuposto):** O problema prático do conflito de ferramentas. A intuição de que misturar as configurações de dois sistemas operacionais diferentes em uma única pasta causa quebra de ambiente.
-2.  **O Conceito de Desacoplamento:** A decisão lógica de separar projetos e responsabilidades em repositórios isolados (Conexão direta com a ação material documentada em `E-014`).
-3.  **O Mecanismo de Integração (A Ponte):** Como fazer duas coisas separadas conversarem de forma padronizada sem se fundirem? O conceito abstrato de um servidor ou protocolo de contexto (Intuição da ponte MCP amparada por `E-015` e `E-016`).
-4.  **A Verificação Silenciosa (Automação):** O uso de robôs invisíveis de checagem (Integração Contínua / CI) para garantir que a ponte não quebre a cada pequena alteração (`E-015`).
+1. **Ponto de Partida (Zero Pressuposto):** introduzir intuitivamente separação de responsabilidades e ambientes.
+2. **O Conceito de Desacoplamento:** usar a separação documentada em `E-014` como caso concreto.
+3. **O Mecanismo de Integração (A Ponte):** apresentar comunicação padronizada entre ambientes separados usando a ponte MCP observada em `E-015` e relatada em `E-016`.
+4. **A Verificação Silenciosa (Automação):** usar a CI de `E-015` para explicar verificação automatizada, preservando o limite de que sucesso no runner não comprova execução no aparelho.
 
-*   *Status de Dependência:* Vínculo sistêmico derivado das relações **R-001** e **R-002**.
+* **Base factual:** R-001 e R-002 sustentam relações contextuais.
+* **Hipótese pedagógica:** a ordem separação → ponte → CI é candidata; as relações observadas não provam que compreender E-014 seja pré-requisito técnico ou cognitivo para compreender E-015/E-016.
 
 ## Diferenciação Epistemológica da Progressão
-*   **Dependência Técnica:** Para entender a ponte (`E-015`), o aprendiz precisa compreender primeiro o motivo da separação dos ambientes (`E-014`).
-*   **Hipótese Pedagógica:** Propor a intuição da "privacidade absoluta" como vetor para ensinar infraestrutura local é uma escolha didática a ser testada no GOAL-009; o corpus sustenta o fato de que a diretriz existia, não que este seja o único caminho de ensino.
+
+* **Relações observadas:** R-001, R-002 e R-003 fornecem contexto e casos concretos.
+* **Dependência técnica:** nenhuma dependência pedagógica/técnica entre os conceitos foi demonstrada pelo recorte atual.
+* **Hipóteses pedagógicas:** as duas ordens propostas são caminhos candidatos a testar; não são currículo obrigatório nem inferência sobre domínio de André.
+* **Bifurcação:** as trilhas A e B podem ser percorridas independentemente; o corpus atual não sustenta uma ordem obrigatória entre elas.
