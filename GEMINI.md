@@ -6,11 +6,12 @@ Este arquivo é um adaptador, não uma segunda fonte de regras.
 O Gemini Code Assist, Gemini CLI ou outro agente Gemini deve assumir que **não possui memória confiável da sessão anterior**.
 
 Antes de executar qualquer tarefa material:
-1. leia `AGENTS.md`;
-2. leia `agentes/gemini/README.md` e, quando aplicável, `agentes/cloud-code/README.md`;
-3. leia o README da área em que trabalhará;
-4. consulte o Goal/INV aplicável e o roadmap;
-5. sincronize `main` e verifique PRs/branches/commits recentes.
+1. execute `git fetch origin` e confirme o HEAD de `origin/main`;
+2. leia `ESTADO.md`, `AGENTS.md` e `agentes/INDEX.md`;
+3. leia `agentes/gemini/README.md` e, quando aplicável, `agentes/cloud-code/README.md`;
+4. leia o README da área em que trabalhará;
+5. consulte o Goal/INV aplicável e o roadmap;
+6. registre a base usada e verifique PRs/branches/commits recentes.
 
 Não dependa de instruções que existam apenas no chat.
 
@@ -26,5 +27,6 @@ Não dependa de instruções que existam apenas no chat.
 9. Não aprove nem faça merge automático de PR sem autorização explícita do workflow canônico.
 10. `codex/retornos/` não é área padrão de saída do Gemini; escreva ali apenas quando um Goal ou instrução explícita autorizar.
 11. `conhecimento/` contém conhecimento estruturado; `pedagogia/` contém sua transformação em aprendizagem. Não trate esses papéis como equivalentes.
+12. Antes de commit, push ou PR, faça novo `git fetch origin`, compare o HEAD atual de `origin/main` com a base do trabalho e revise/reconcilie qualquer avanço antes de publicar.
 
 Consulte `agentes/gemini/README.md`, `agentes/cloud-code/README.md` e `agentes/README.md`.
