@@ -59,9 +59,15 @@ Preferir corpus único + tags + consultas/lentes. Não criar cópias por agente,
 **`conhecimento/` contém conhecimento estruturado. `pedagogia/` contém a transformação desse conhecimento em progressão, ensino, explicação, exercícios e outras formas de aprendizagem. Não confundir as duas camadas.**
 
 ## Goals
-`READY_FOR_CODEX` é estado operacional, não comentário. Um executor deve realizar apenas Goal autorizado, validar e produzir retorno auditável; não avançar autonomamente ao próximo Goal. Outros agentes podem investigar/preparar material sem falsificar o estado do Goal.
+Existem dois gates operacionais:
+- `READY_FOR_CODEX` — nome legado que agora significa **pronto para executor autorizado**;
+- `CONCLUÍDO` — gate de saída, somente após entregáveis, Acceptance e validação.
 
-**`codex/retornos/` pertence ao workflow de execução dos Goals do Codex. Outros agentes só devem escrever ali quando um Goal ou instrução explícita autorizar sua participação naquele retorno.**
+Estados de rascunho/preparação não autorizam execução por si só.
+
+Uma sequência explicitamente autorizada pode promover automaticamente o Goal seguinte ao gate `READY_FOR_CODEX` somente quando a dependência anterior estiver `CONCLUÍDO` e validada. Aplicar `codex/goals/PROTOCOLO-EXECUCAO-SEQUENCIAL.md`.
+
+Novos relatórios multiagente devem preferir `execucoes/`. `codex/retornos/` permanece válido para histórico e workflow Codex específico.
 
 ## Multiagente
 Codex, Gemini CLI, Cloud Code/Gemini Code Assist, ChatGPT e futuros agentes podem ter especialidades diferentes. Nenhum agente possui uma “verdade própria”: descobertas retornam ao GitHub por evidência, documento ou PR apropriado.
