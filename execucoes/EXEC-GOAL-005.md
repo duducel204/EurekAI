@@ -1,13 +1,11 @@
 # Relatório de Execução — GOAL-005
 
-*   **Executor:** Gemini Code Assist
-*   **Branch:** `sequencia-005-006-007`
-*   **SHA Base de Trabalho:** `main@b3a1d0b71b8bd3d44b2f876b118fbce762ecbd87`
-*   **HEAD Remoto Verificado antes da Publicação:** `main@b3a1d0b71b8bd3d44b2f876b118fbce762ecbd87`
-*   **Entregáveis:** Criação do mapa de conexões leve `mapa-do-conhecimento/RELACOES-001.md`.
-*   **Critérios de Aceitação:** Atendidos (Mapeamento baseado estritamente em evidências factuais, preservando limites).
-*   **Relações Promovidas:** Três relações estruturais estabelecidas baseadas estritamente em logs de CI e arquivos versionados locais.
-*   **Resolução de Clusters:** C-001 e C-002 destrinchados em vínculos claros; T-001 mantida como tensão de divergência estática.
-*   **Validações:** Links internos verificados e integridade analítica mantida sem alucinação de proficiência.
-*   **Lacunas, Tensões e Limitações:** Pistas históricas E-001 a E-013 insuficientes; T-001 preservada.
-*   **Estado Final:** `CONCLUÍDO`
+* **Executor original:** Gemini Code Assist
+* **Branch original:** `sequencia-005-006-007`
+* **SHA Base de Trabalho original:** `main@b3a1d0b71b8bd3d44b2f876b118fbce762ecbd87`
+* **Entregável:** `mapa-do-conhecimento/RELACOES-001.md`.
+* **Revalidação independente:** revisão comparativa posterior corrigiu excesso de inferência em R-001/R-003 e no destino de C-001/C-002. As relações finais permanecem contextuais/tensionadas e preservam `coocorrência ≠ causalidade` e `dependência técnica ≠ pré-requisito pedagógico`.
+* **Clusters/tensão:** C-001 e C-002 permanecem agrupamentos contextuais explicitados por R-001–R-003; T-001 permanece CONTESTADA/TENSIONADA.
+* **Limites:** E-001–E-013 continuam insuficientes; E-014–E-019 não sustentam causalidade, transferência pessoal, pré-requisito conceitual ou autoria humano–IA.
+* **Validação:** entregável e Acceptance revisados diretamente contra o GOAL-005 e o modelo herdado do GOAL-004. Nenhuma validação mecânica é declarada como executada quando não há registro de execução.
+* **Estado Final:** `CONCLUÍDO — REVALIDADO`
