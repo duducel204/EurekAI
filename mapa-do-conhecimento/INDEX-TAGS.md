@@ -22,7 +22,7 @@ Exemplos:
 ## Famílias iniciais — abertas
 
 ### Assunto / tecnologia
-`#api #github #git #codex #mcp #powershell #gemini #openwebui #cloud #agentes`
+`#api #github #git #codex #mcp #termux #powershell #gemini #openwebui #cloud #agentes`
 
 ### Natureza do item
 `#evidencia #artefato #documento #ideia #plano #decisao #hipotese #experiencia #erro #descoberta #pendencia`
@@ -35,6 +35,10 @@ Exemplos:
 
 ### Participação humano–IA
 `#ia-explicou #andre-propos #ia-propos #andre-modificou #andre-rejeitou #andre-corrigiu-ia #autoria-incerta`
+
+## Adição justificada no GOAL-004
+
+`#termux` conecta E-014–E-018 no [modelo M-001](MODELO-001-CONHECIMENTO-OBSERVADO.md), permitindo consultar decisões, teste, relato e lacuna do mesmo contexto. Não é sinônimo de `#mcp`: tradução local e decisões de privacidade pertencem ao contexto Termux sem necessariamente envolver a ponte MCP. Nenhum alias novo foi necessário.
 
 ## Regra de crescimento
 
