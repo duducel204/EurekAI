@@ -23,9 +23,13 @@ O repositório é multiagente. Codex, Gemini CLI, Cloud Code/Gemini Code Assist 
 - `investigacao/`: lacunas que exigem pesquisa/validação.
 - `pedagogia/`: transformação do conhecimento em aprendizagem.
 - `ideias-de-produto/`: possibilidades derivadas, sem aprovação implícita.
+- `contexto/`: memória contextual do projeto; não é diretório de scripts.
 - `templates/`: formatos reutilizáveis validados.
 - `codex/`: Goals e retornos do workflow de construção.
 - `agentes/`: contratos e adaptadores para colaboração multiagente.
+- `ferramentas/`: scripts/utilitários compartilhados entre agentes.
+- `.gemini/`: configuração e skills do ambiente Gemini; não é corpus canônico.
+- `.vscode/`: configuração compartilhável do workspace/editor.
 
 ## Estado operacional
 Consulte `codex/goals/ROADMAP-GOALS.md` para direção e estado dos Goals. O status de um arquivo deve refletir a realidade observável; PRs, commits e retornos são evidência de execução.
