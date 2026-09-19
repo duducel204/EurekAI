@@ -1,7 +1,7 @@
 # PROTOCOLO — Execução sequencial automática de Goals
 
 **Estado:** CANONIZADO  
-**Aplicação inicial:** GOAL-005 → GOAL-006 → GOAL-007  
+**Aplicações:** GOAL-005 → GOAL-006 → GOAL-007 (concluída); GOAL-008 → GOAL-009 → GOAL-010 (preparada)  
 **Natureza:** execução multiagente com validação entre etapas
 
 ## Dois gates operacionais
@@ -128,3 +128,14 @@ O executor não deve:
 
 ## Princípio
 **Automatizar a sequência não significa remover gates. Significa fazer o executor atravessar os gates sozinho somente quando a evidência e as validações permitirem.**
+
+
+## Aplicação 008 → 009 → 010
+A mesma mecânica de gates aplica-se à sequência 008→009→010:
+- 008 entra primeiro;
+- 009 só entra após 008 `CONCLUÍDO` e validado;
+- 010 só entra após 009 `CONCLUÍDO` e validado;
+- uma autorização humana explícita para a sequência inteira dispensa nova autorização entre etapas;
+- qualquer stop condition interrompe a progressão.
+
+Os arquivos específicos de GOAL-008, GOAL-009 e GOAL-010 definem Deliverables, Acceptance, validações e stop conditions próprios. O protocolo geral não substitui esses contratos.
