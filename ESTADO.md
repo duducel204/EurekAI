@@ -29,9 +29,13 @@ Não gravar aqui um SHA como “versão atual permanente”. O agente deve consu
 - GOAL-005 — concluído, revalidado e validado
 - GOAL-006 — concluído, revalidado e validado
 - GOAL-007 — concluído, revalidado e validado
-- GOAL-008–010 — rascunhos/sementes conforme roadmap
+- GOAL-008 — preparado, não liberado
+- GOAL-009 — preparado, não liberado; condicionado ao GOAL-008
+- GOAL-010 — preparado, não liberado; condicionado ao GOAL-009
 
 A sequência 005→006→007 foi completamente liberada, executada, revalidada semanticamente/epistemologicamente e teve validação mecânica executada no ambiente Code, informada pelo operador humano como aprovada. Os relatórios em `execucoes/` preservam a distinção entre essas camadas de validação.
+
+A sequência 008→009→010 está completamente preparada para uma única autorização de execução condicional; ainda não foi liberada.
 
 ## Regra de trabalho multiagente
 Ao iniciar trabalho, registrar o SHA de `origin/main` usado como base.
