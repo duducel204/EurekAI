@@ -5,6 +5,17 @@ Este é o ponto de entrada para qualquer agente de IA que trabalhe no EurekAI.
 ## Missão
 Continuar o projeto sem depender da conversa que originou o trabalho. O GitHub é o estado canônico; sessões, prompts, memórias e configurações locais dos agentes são contexto auxiliar e podem desaparecer a qualquer momento.
 
+## Produto final
+Antes de propor direção de produto, interface, conteúdo ou MVP, leia `produto/README.md` e `produto/VISAO-ORIGINAL.md`.
+
+O produto final do EurekAI é uma experiência de alfabetização em inteligência artificial acessível por link, feita para pessoas que podem começar da base zero. O repositório é infraestrutura canônica; o produto é a experiência de aprendizagem clara, segura, intuitiva e progressiva.
+
+Regra de alinhamento:
+
+> Isso ajuda alguém que não sabe nada de IA a começar a entender, usar e questionar IA com segurança?
+
+Se a resposta for não, a proposta provavelmente pertence a uma camada posterior ou é desvio de projeto.
+
 ## Regra de reinício de sessão
 **Nenhum agente deve presumir memória entre sessões.**
 
@@ -12,10 +23,11 @@ Ao iniciar uma nova sessão, reabrir o workspace ou perder contexto:
 1. sincronize referências remotas com `git fetch origin`;
 2. leia `ESTADO.md` e confirme o HEAD atual de `origin/main`;
 3. leia este arquivo e `agentes/INDEX.md`;
-4. leia o adaptador específico do seu agente;
-5. leia o README da área afetada;
-6. consulte `codex/goals/ROADMAP-GOALS.md` e o Goal/INV aplicável;
-7. verifique PRs, branches, retornos e commits recentes antes de agir.
+4. leia `produto/README.md` e `produto/VISAO-ORIGINAL.md` quando o tema envolver produto, experiência, público, interface, conteúdo ou MVP;
+5. leia o adaptador específico do seu agente;
+6. leia o README da área afetada;
+7. consulte `codex/goals/ROADMAP-GOALS.md` e o Goal/INV aplicável;
+8. verifique PRs, branches, retornos e commits recentes antes de agir.
 
 A sessão nunca é a fonte de verdade. O repositório deve conter contexto suficiente para reconstruir o estado operacional.
 
@@ -27,6 +39,11 @@ A sessão nunca é a fonte de verdade. O repositório deve conter contexto sufic
 5. Identifique **em qual zona a mudança pertence** antes de criar ou editar arquivo.
 
 ## Zonas de escrita
+
+### Produto e experiência final
+Use `produto/` para visão do produto, promessa, público, experiência por link, limites do MVP, posicionamento e regras contra desvio de produto.
+
+Não confundir produto com implementação. Interface, jogo, monetização e tecnologia devem derivar da visão de alfabetização em IA desde zero.
 
 ### Conhecimento e memória canônica
 Use as pastas semânticas existentes: `fontes/`, `experiencias/`, `conhecimento/`, `decisoes/`, `hipoteses/`, `descobertas/`, `erros/`, `investigacao/`, `mapa-do-conhecimento/`, `pedagogia/`, `capturas/` e `contexto/`.
