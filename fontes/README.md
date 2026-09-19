@@ -1,15 +1,23 @@
-# Fontes e lotes
+# Fontes
 
-Registra procedência e recortes consultáveis; não exige copiar conversas, arquivos privados ou históricos inteiros para o GitHub. `REGISTRO.md` é o índice operacional.
+**Estado atual:** registro inicial de fontes e lotes disponível; corpus histórico ainda parcial.
 
-## Aquisição
-Identifique fonte/responsável; teste acesso real; defina lote e versão/checksum quando possível; preserve original; atribua IDs estáveis; registre localizador reproduzível, transformação e limitações. Estados de acesso devem distinguir DISPONÍVEL, NÃO DISPONÍVEL, PRECISA SER EXPORTADA, PODE SER AUTOMATIZADA e EXIGE INTERVENÇÃO.
+## Função
 
-## Segurança e derivação
-Disponibilidade não é autorização de ingestão. Segredos e dados sensíveis ficam fora do corpus público/canônico quando não necessários. Fontes derivadas da mesma origem pertencem à mesma linhagem e não contam como corroboração independente.
+`fontes/` registra procedência, lotes, recortes, localizadores e limites de acesso.
 
-## Regra transversal
-Este diretório participa de um corpus único e rastreável. Tags oferecem lentes de consulta; não duplicar o mesmo conteúdo apenas para classificá-lo. Fato, experiência, decisão, hipótese, tensão, lacuna e conteúdo proposto por IA devem permanecer distinguíveis. Todo agente deve preservar procedência e apontar para a fonte/evidência quando fizer afirmação material.
+Esta pasta responde: de onde veio uma evidência, qual recorte foi usado e quais limites existem.
 
-## Para agentes
-Codex, Gemini CLI, Cloud Code/Gemini Code Assist e outros agentes autorizados devem tratar o GitHub como estado canônico. Leiam `/AGENTS.md` antes de alterar conteúdo. Se faltar evidência, registrem a lacuna ou investigação adequada; não preencham por inferência silenciosa.
+## Arquivo atual
+
+- `REGISTRO.md`: registro de fontes e lotes consultáveis.
+
+## Estado pós-GOAL-010
+
+As fontes iniciais sustentam o bootstrap, mas não esgotam a trajetória histórica. A ampliação deve ocorrer por pipelines permanentes.
+
+## Regra semântica
+
+Fonte disponível não é sinônimo de evidência suficiente. Commit, documento, conversa ou retorno de IA têm forças probatórias diferentes.
+
+Não copiar corpus bruto desnecessariamente para o GitHub. Preferir referência segura, hash, lote, localizador e derivação validada.
