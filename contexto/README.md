@@ -1,24 +1,22 @@
 # Contexto
 
-Área de memória contextual do EurekAI: origem, direção, premissas declaradas, separações conceituais e mudanças relevantes de entendimento.
+**Estado atual:** memória contextual ativa do projeto.
 
-## Entra aqui
-- contexto de origem do projeto;
-- princípios de direção ainda necessários para interpretar o corpus;
-- distinções importantes entre conteúdo, processo e produto;
-- registros contextuais cujo valor depende de saber “por que isso existe”.
+## Função
 
-## Não entra aqui
-- scripts e automações;
-- configuração de IDE/CLI;
-- credenciais;
-- logs;
-- skills de agentes;
-- arquivos gerados automaticamente por ferramentas.
+`contexto/` registra origem, direção e transições do EurekAI.
 
-Esses itens pertencem a `ferramentas/`, `.gemini/`, `.vscode/` ou ao runtime local correspondente.
+Não é pasta de scripts, logs brutos ou artefatos de ferramenta.
 
-## Regra epistemológica
-Contexto não deve transformar automaticamente configuração operacional em decisão. Afirmações sobre “como o EurekAI funciona” precisam refletir decisão/evidência vigente, não apenas o que um agente acabou de configurar.
+## Arquivos atuais
 
-Leia também `/AGENTS.md` antes de editar esta área.
+- `ORIGEM-E-DIRECAO.md`: contexto fundador e direção do projeto.
+- `TRANSICAO-BOOTSTRAP-OPERACAO-CONTINUA.md`: passagem de GOALs para pipelines permanentes.
+
+## Estado pós-GOAL-010
+
+A transição bootstrap → operação contínua está concluída como direção canônica. O contexto agora serve para orientar retomadas, não para reabrir os dez Goals.
+
+## Regra semântica
+
+Contexto ajuda a interpretar o projeto, mas não substitui evidência, decisão formal ou validação.
