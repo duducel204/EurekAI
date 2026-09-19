@@ -1,6 +1,6 @@
 # GOAL-009 — Auditoria, validação, correção e contrato de ingestão
 
-**Status:** PREPARADO — NÃO LIBERADO
+**Status:** CONCLUÍDO
 **Executor-alvo:** QUALQUER EXECUTOR AUTORIZADO
 **Dependência:** GOAL-008 concluído e validado
 **Sequência:** segundo passo da sequência 008→009→010
