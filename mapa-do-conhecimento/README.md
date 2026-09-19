@@ -1,14 +1,25 @@
 # Mapa do conhecimento
 
-Camada derivada que permite enxergar o corpus sem copiá-lo: tags, interseções, relações, clusters, dependências, lacunas e progressões candidatas.
+**Estado atual:** mapa inicial concluído, com tags, modelo observado e relações iniciais.
 
-## Arquitetura atual
-Preferir **corpus único + tags + consultas/lentes**. `INDEX-TAGS.md` define a linguagem evolutiva e `MODELO-001-CONHECIMENTO-OBSERVADO.md` é o primeiro modelo derivado.
+## Função
 
-Uma relação explícita deve acrescentar algo além da coocorrência de tags. Correlação histórica não prova causalidade; recorrência não prova domínio. Lentes conceitual, histórica e cognitiva podem ser derivadas da mesma base.
+`mapa-do-conhecimento/` organiza lentes, relações e modelos derivados do corpus validado.
 
-## Regra transversal
-Este diretório participa de um corpus único e rastreável. Tags oferecem lentes de consulta; não duplicar o mesmo conteúdo apenas para classificá-lo. Fato, experiência, decisão, hipótese, tensão, lacuna e conteúdo proposto por IA devem permanecer distinguíveis. Todo agente deve preservar procedência e apontar para a fonte/evidência quando fizer afirmação material.
+Ele não é área para entrada bruta nem para decisões novas sem procedência.
 
-## Para agentes
-Codex, Gemini CLI, Cloud Code/Gemini Code Assist e outros agentes autorizados devem tratar o GitHub como estado canônico. Leiam `/AGENTS.md` antes de alterar conteúdo. Se faltar evidência, registrem a lacuna ou investigação adequada; não preencham por inferência silenciosa.
+## Arquivos atuais
+
+- `INDEX-TAGS.md`: vocabulário canônico de tags.
+- `MODELO-001-CONHECIMENTO-OBSERVADO.md`: modelo inicial do conhecimento observado.
+- `RELACOES-001.md`: relações iniciais, com limites semânticos explícitos.
+
+## Estado pós-GOAL-010
+
+A estrutura inicial do mapa está concluída. Novas tags, relações ou modelos devem surgir a partir de evidências validadas e passar por auditoria.
+
+## Regra semântica
+
+Relações explícitas só devem ser criadas quando acrescentarem significado que tags não expressam.
+
+Não transformar proximidade, sequência histórica, frequência ou preferência de ferramenta em causalidade sem evidência.
