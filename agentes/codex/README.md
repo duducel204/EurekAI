@@ -1,14 +1,34 @@
 # Adaptador Codex
 
-Codex é atualmente o executor sistemático dos Goals do EurekAI.
+**Estado atual:** ativo como executor possível; GOALs 001–010 já concluídos.
 
-## Entrada
-Execute `git fetch origin`, confirme o HEAD de `origin/main` e leia `/ESTADO.md`, `/AGENTS.md`, `/agentes/INDEX.md`, `codex/goals/ROADMAP-GOALS.md`, o Goal selecionado, seus predecessores/retornos quando exigidos e os READMEs das áreas afetadas. Registre a base usada.
+## Função
 
-## Execução
-Respeite literalmente o estado do Goal, dependências, stop conditions e critérios de aceitação. Verifique Git/PRs antes de repetir trabalho. Antes de commit/push/PR, faça novo `git fetch origin`; se `main` avançou desde a base, revise, reconcilie e valide novamente antes de publicar. Trabalhe por branch/PR quando o workflow exigir.
+Este adaptador orienta uso do Codex dentro do EurekAI.
 
-## Saída
-Produza retorno auditável em `codex/retornos/` quando especificado e deixe o Git consistente com a execução. Não promova o Goal seguinte por conta própria quando isso exigir revisão externa.
+Codex pode atuar em:
 
-Runtime local, watcher, locks e credenciais ficam fora do corpus/versionamento salvo decisão explícita.
+- edição controlada de arquivos;
+- validação mecânica;
+- scripts e ferramentas;
+- execução de tarefas estruturais;
+- preparação de PRs.
+
+## Regra pós-bootstrap
+
+Não assumir que `codex/goals/` contém a próxima tarefa aberta. Após GOAL-010, a operação normal está em `pipelines/`.
+
+## Retomada mínima
+
+Ler:
+
+1. `ESTADO.md`
+2. `AGENTS.md`
+3. `agentes/INDEX.md`
+4. este arquivo
+5. README da área afetada
+6. `produto/VISAO-ORIGINAL.md` quando a tarefa tocar produto
+
+## Limite
+
+Codex não deve promover hipótese a fato, nem substituir validação semântica por validação de syntax/checks.
