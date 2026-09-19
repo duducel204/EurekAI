@@ -1,29 +1,35 @@
 # Execuções
 
-Área comum para relatórios/handoffs de execução de Goals, independentemente do executor.
+**Estado atual:** relatórios de execução dos GOALs 005–010 registrados.
 
-## Por que existe
-O EurekAI deixou de tratar `READY_FOR_CODEX` como exclusivo do Codex. Codex, Gemini/Cloud Code, humano ou outro executor autorizado podem executar Goals.
+## Função
 
-Por isso, novas execuções multiagente devem registrar seu resultado aqui em vez de criar uma memória paralela por agente.
+`execucoes/` guarda relatórios e handoffs de execução independentes do agente executor.
 
-## Registro mínimo
-Cada relatório deve indicar:
-- Goal executado;
+Esta pasta é preferencial para relatórios novos, substituindo `codex/retornos/` como área comum multiagente.
+
+## Arquivos atuais
+
+- `EXEC-GOAL-005.md`
+- `EXEC-GOAL-006.md`
+- `EXEC-GOAL-007.md`
+- `EXEC-GOAL-008.md`
+- `EXEC-GOAL-009.md`
+- `EXEC-GOAL-010.md`
+
+## Estado pós-GOAL-010
+
+Os relatórios atuais fecham o bootstrap inicial. Novas execuções devem registrar:
+
+- objetivo;
 - executor;
-- branch;
-- base de `origin/main` usada;
-- HEAD remoto verificado antes da publicação;
-- arquivos/entregáveis;
-- critérios de aceitação;
-- validações executadas;
-- lacunas, tensões e limitações;
-- estado final: `CONCLUÍDO` ou `BLOQUEADO`.
+- base usada;
+- fontes/evidências;
+- arquivos alterados;
+- validações;
+- limitações;
+- próximo estado permitido.
 
-## Convenção candidata
-`GOAL-005-<executor>-<data-ou-id>.md`
+## Regra semântica
 
-A convenção pode evoluir; rastreabilidade é mais importante que o nome.
-
-## Histórico
-`codex/retornos/` continua válido para execuções históricas e para trabalhos explicitamente pertencentes ao workflow Codex.
+Execução concluída não elimina lacunas externas. O relatório deve distinguir entrega feita, validação realizada e pendências remanescentes.
