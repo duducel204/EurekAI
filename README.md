@@ -19,6 +19,7 @@ O repositório é o motor interno: memória, evidências, unidades de conhecimen
 - Modo atual: operação contínua por pipelines.
 - Primeiro caso candidato: Google Takeout/Drive.
 - Takeout/Drive: pipeline definida, mas nenhum Takeout foi processado ou canonizado.
+- EKL-0: schema compacto preparado para classificação/mineração futura do histórico/Takeout, sem execução real ainda.
 - Corpus histórico: ainda parcial; a pendência é acompanhada em [investigacao/pendencias/INV-001-CORPUS-HISTORICO.md](investigacao/pendencias/INV-001-CORPUS-HISTORICO.md).
 
 ## Para quem começa do zero
@@ -58,7 +59,7 @@ O Gemini possui também [GEMINI.md](GEMINI.md), que adapta o contexto comum ao a
 - `mapa-do-conhecimento/`: tags, relações e modelos derivados.
 - `decisoes/`, `hipoteses/`, `descobertas/`, `erros/`: estados epistemológicos e trajetória.
 - `investigacao/`: lacunas que exigem pesquisa/validação.
-- `pedagogia/`: transformação do conhecimento em aprendizagem.
+- `pedagogia/`: transformação do conhecimento em aprendizagem; inclui exemplo didático de otimização de tokens com EKL-0.
 - `ideias-de-produto/`: possibilidades derivadas, sem aprovação implícita.
 - `contexto/`: memória contextual do projeto; não é diretório de scripts.
 - `templates/`: formatos reutilizáveis validados.
@@ -66,10 +67,23 @@ O Gemini possui também [GEMINI.md](GEMINI.md), que adapta o contexto comum ao a
 - `execucoes/`: relatórios/handoffs de execução independentes do agente.
 - `agentes/`: contratos, índice e adaptadores para colaboração multiagente.
 - `ESTADO.md`: ponteiro operacional leve; a versão técnica corrente é o HEAD de `origin/main`.
-- `ferramentas/`: scripts/utilitários compartilhados entre agentes.
-- `pipelines/`: contratos de operação contínua e ingestão incremental.
+- `ferramentas/`: scripts/utilitários compartilhados entre agentes, incluindo validação/expansão EKL-0.
+- `pipelines/`: contratos de operação contínua, ingestão incremental e schemas compactos de pipeline.
 - `.gemini/`: configuração e skills do ambiente Gemini; não é corpus canônico.
 - `.vscode/`: configuração compartilhável do workspace/editor.
+
+## EKL-0
+
+EKL-0 — EurekAI Compact Language v0 — é uma linguagem compacta intermediária para reduzir repetição de metadados nas etapas futuras de classificação e mineração do histórico/Takeout.
+
+Documentação principal:
+
+- [pipelines/schemas/EKL-0-DICIONARIO.md](pipelines/schemas/EKL-0-DICIONARIO.md)
+- [pipelines/schemas/EKL-0-CLASSIFICACAO-TAKEOUT.md](pipelines/schemas/EKL-0-CLASSIFICACAO-TAKEOUT.md)
+- [pipelines/schemas/EKL-0-MINERACAO-TAKEOUT.md](pipelines/schemas/EKL-0-MINERACAO-TAKEOUT.md)
+- [pedagogia/OTIMIZACAO-TOKENS-EKL-0.md](pedagogia/OTIMIZACAO-TOKENS-EKL-0.md)
+
+EKL-0 não é formato final de conhecimento nem linguagem para usuário final. É bastidor técnico e exemplo pedagógico.
 
 ## Regra de alinhamento
 
