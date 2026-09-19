@@ -19,14 +19,16 @@ Goals posteriores devem ser refinados pelas evidências dos anteriores. Não exe
 - GOAL-005 — Relações, dependências e transferências — CONCLUÍDO.
 - GOAL-006 — Progressão do zero à fronteira atual — CONCLUÍDO.
 - GOAL-007 — Engenharia pedagógica atemporal — CONCLUÍDO.
-- GOAL-008 — Produção sistemática do conteúdo — SEED_DRAFT.
-- GOAL-009 — Auditoria, validação e correção — SEED_DRAFT.
-- GOAL-010 — Ingestão contínua e evolução — SEED_DRAFT.
+- GOAL-008 — Produção sistemática do conteúdo — PREPARADO — NÃO LIBERADO.
+- GOAL-009 — Auditoria, validação e correção — PREPARADO — NÃO LIBERADO; condicionado ao 008.
+- GOAL-010 — Ingestão contínua e evolução — PREPARADO — NÃO LIBERADO; condicionado ao 009.
 
-## Sequência preparada
-GOAL-005 → GOAL-006 → GOAL-007 está preparada para execução sequencial condicional segundo [PROTOCOLO-EXECUCAO-SEQUENCIAL.md](PROTOCOLO-EXECUCAO-SEQUENCIAL.md).
+## Sequências
+GOAL-005 → GOAL-006 → GOAL-007 foi executada, revalidada e validada.
 
-Uma única autorização humana futura pode liberar a sequência inteira. O executor atravessa cada gate somente após validar a etapa anterior. Falha interrompe a sequência.
+GOAL-008 → GOAL-009 → GOAL-010 está preparada para execução sequencial condicional segundo [PROTOCOLO-EXECUCAO-SEQUENCIAL.md](PROTOCOLO-EXECUCAO-SEQUENCIAL.md).
+
+Uma única autorização humana pode liberar 008→009→010 inteira. O executor atravessa cada gate somente após validar a etapa anterior. Falha interrompe a sequência.
 
 ## Macrofluxo
 fontes históricas → aquisição/investigação → evidências → inventário → modelo do conhecimento → relações/dependências → progressão → engenharia pedagógica → conteúdo → auditoria/validação → evolução contínua.
