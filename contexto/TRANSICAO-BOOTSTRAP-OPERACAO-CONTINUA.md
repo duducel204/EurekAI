@@ -1,6 +1,6 @@
 # Transição do bootstrap para operação contínua
 
-**Estado:** GOAL-001–010 formam o bootstrap inicial do EurekAI.  
+**Estado:** GOAL-001–010 formam o bootstrap inicial do EurekAI.
 **Transição:** concluída documentalmente pelo GOAL-010; pipelines ainda dependem de entradas e autorizações reais.
 
 ## O que o bootstrap estabeleceu

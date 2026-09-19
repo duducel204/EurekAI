@@ -1,6 +1,6 @@
 # Contrato geral de ingestão — v1
 
-**Estado:** CANÔNICO APÓS AUDITORIA DO GOAL-009  
+**Estado:** CANÔNICO APÓS AUDITORIA DO GOAL-009
 **Unidade de trabalho:** uma conversa, documento ou artefato individual; nunca o corpus inteiro em um único contexto de LLM.
 
 ## Princípios

@@ -1,7 +1,7 @@
 # Pipeline candidata — Google Takeout/Drive v1
 
-**Estado:** DEFINIDA, NÃO EXECUTADA  
-**Fonte:** Google Drive/Takeout autorizado por André  
+**Estado:** DEFINIDA, NÃO EXECUTADA
+**Fonte:** Google Drive/Takeout autorizado por André
 **Estado canônico:** GitHub/EurekAI após validação e PR.
 
 ## Entrada candidata

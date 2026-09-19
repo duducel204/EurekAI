@@ -1,6 +1,6 @@
 # Contrato canônico de unidade de conhecimento — v1
 
-**Estado:** CANÔNICO PARA O LOTE INICIAL DO GOAL-008  
+**Estado:** CANÔNICO PARA O LOTE INICIAL DO GOAL-008
 **Framework:** `pedagogia/FRAMEWORK-PEDAGOGICO.md`
 
 Uma unidade sintetiza conhecimento rastreável. Ela não substitui a evidência, não transforma hipótese pedagógica em fato e não copia o corpus bruto.

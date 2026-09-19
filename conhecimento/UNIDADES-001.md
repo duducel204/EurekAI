@@ -1,6 +1,6 @@
 # Lote inicial de unidades de conhecimento — U-001
 
-**Contrato:** [CONTRATO-UNIDADE-DE-CONHECIMENTO.md](CONTRATO-UNIDADE-DE-CONHECIMENTO.md)  
+**Contrato:** [CONTRATO-UNIDADE-DE-CONHECIMENTO.md](CONTRATO-UNIDADE-DE-CONHECIMENTO.md)
 **Estado:** PRODUZIDO PELO GOAL-008; aguardando auditoria do GOAL-009.
 
 ## UC-001 — Verificação em um ambiente não prova funcionamento em outro
