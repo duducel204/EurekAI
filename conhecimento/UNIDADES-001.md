@@ -1,7 +1,8 @@
 # Lote inicial de unidades de conhecimento — U-001
 
-**Contrato:** [CONTRATO-UNIDADE-DE-CONHECIMENTO.md](CONTRATO-UNIDADE-DE-CONHECIMENTO.md)
-**Estado:** PRODUZIDO PELO GOAL-008; aguardando auditoria do GOAL-009.
+**Contrato:** [CONTRATO-UNIDADE-DE-CONHECIMENTO.md](CONTRATO-UNIDADE-DE-CONHECIMENTO.md)  
+**Estado:** PRODUZIDO PELO GOAL-008; AUDITADO E VALIDADO PELO GOAL-009.  
+**Situação pós-bootstrap:** lote canônico inicial; não esgota o corpus.
 
 ## UC-001 — Verificação em um ambiente não prova funcionamento em outro
 
@@ -40,3 +41,15 @@
 - **Lacunas:** implementação posterior pode ter alterado o estado; revalidar o commit antes de usar o exemplo como estado atual.
 - **Executor:** Codex, síntese sobre corpus versionado.
 - **Geração:** 2026-09-19; unidade v1; framework pedagógico v1.
+
+## Validação semântica do lote
+
+A auditoria do GOAL-009 confirmou que o lote preserva as diferenças entre:
+
+- evidência e hipótese;
+- ambiente testado e ambiente não testado;
+- decisão arquitetural e implementação concluída;
+- mecanismo atemporal e exemplo versionado;
+- confiança no mecanismo e competência/autoria pessoal.
+
+Não houve correção material exigida na auditoria. As lacunas permanecem lacunas, não impedimento para o uso das unidades como exemplos controlados.
