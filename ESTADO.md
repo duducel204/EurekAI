@@ -20,6 +20,7 @@ Não gravar aqui um SHA como “versão atual permanente”. O agente deve consu
 - investigações: `investigacao/`
 - mapa do conhecimento: `mapa-do-conhecimento/`
 - pipelines permanentes: `pipelines/`
+- schemas compactos: `pipelines/schemas/`
 
 ## Gates
 
@@ -56,9 +57,12 @@ Próximo foco operacional recomendado:
 1. manter READMEs e ponteiros coerentes com o estado pós-GOAL-010;
 2. preparar a primeira execução autorizada da pipeline Google Takeout/Drive;
 3. iniciar por política de dados e inventário determinístico;
-4. somente depois classificar, minerar seletivamente e canonizar resultados.
+4. usar EKL-0, quando apropriado, para classificação/mineração compacta;
+5. somente depois validar, expandir e canonizar resultados aprovados.
 
 A pipeline Google Takeout/Drive está definida, mas nenhum Takeout foi acessado, processado ou canonizado no `main` como corpus de conhecimento.
+
+EKL-0 está documentado como schema compacto experimental e intermediário para leitura futura do histórico/Takeout. Ele não é conhecimento final, não substitui validação e não autoriza mineração massiva.
 
 ## Pendências conhecidas
 
