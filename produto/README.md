@@ -1,25 +1,41 @@
-# Produto — EurekAI
+# Produto
 
-Esta pasta registra a visão do produto final do EurekAI: a experiência que uma pessoa acessa por link para começar a aprender inteligência artificial desde a base zero.
+**Estado atual:** visão canônica inicial registrada. Produto ainda não implementado como interface final.
 
-O repositório não existe apenas para organizar arquivos, Goals ou pipelines. Esses elementos são infraestrutura. O produto final é uma experiência de aprendizagem guiada, simples, segura e progressiva.
+## Função
 
-## Leitura obrigatória
+`produto/` descreve a experiência final que o EurekAI pretende entregar para pessoas usuárias.
 
-- [VISAO-ORIGINAL.md](VISAO-ORIGINAL.md) — núcleo do produto, público, promessa, experiência e limites do MVP.
+O produto não é o repositório. O repositório é o motor interno; o produto é a experiência acessível por link.
 
-## Relação com o restante do repositório
+## Visão atual
 
-- `conhecimento/` estrutura o que o projeto sabe.
-- `pedagogia/` transforma conhecimento em progressão de aprendizagem.
-- `mapa-do-conhecimento/` organiza tags, relações e tensões.
-- `pipelines/` e `codex/goals/` sustentam a operação interna.
-- `produto/` define o que a pessoa usuária final deve experimentar.
+EurekAI é uma experiência de alfabetização em inteligência artificial para pessoas que começam da base zero.
 
-## Regra de interpretação
+A pessoa deve conseguir clicar em um link e começar a aprender IA sem saber previamente o que é prompt, modelo, chatbot, API, automação ou GitHub.
 
-Ao trabalhar no produto, não começar por tecnologia, jogo, interface ou monetização. Começar pela pergunta:
+## Arquivo principal
 
-> O que uma pessoa que não sabe nada de inteligência artificial deve conseguir entender, sentir ou fazer depois de clicar no link?
+- `VISAO-ORIGINAL.md`: visão canônica inicial do produto, público, promessa, experiência esperada, trilhas iniciais e limites do MVP.
 
-A resposta deve preservar o objetivo central: alfabetização em IA desde zero, com linguagem acessível, progressão intuitiva e pensamento crítico.
+## Estado pós-GOAL-010
+
+A visão de produto foi incorporada depois do fechamento dos dez Goals para evitar que agentes futuros reduzam o EurekAI a um repositório, framework interno ou pipeline técnico.
+
+## Próxima evolução natural
+
+A próxima etapa de produto deve ser especificar o MVP por link:
+
+```text
+entrada → escolha de perfil → primeira explicação → interação guiada → mini-desafio → continuação
+```
+
+Isso ainda não está implementado. É uma camada posterior à fundação atual.
+
+## Regra de alinhamento
+
+Antes de propor interface, conteúdo ou automação, responder:
+
+> Isso ajuda alguém que não sabe nada de IA a começar a entender, usar e questionar IA com segurança?
+
+Se não ajudar, provavelmente é suporte interno ou desvio.
