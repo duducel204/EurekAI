@@ -1,14 +1,17 @@
 # Decisões
 
-Registra escolhas explicitamente tomadas e relevantes para arquitetura, conteúdo, operação ou direção do projeto.
+**Estado atual:** área canônica para decisões explícitas.
 
-## Registre
-O que foi decidido, contexto, alternativas relevantes quando conhecidas, razão declarada, data/versão e evidências da decisão. Mudança posterior cria nova decisão/registro; não reescreva silenciosamente o passado.
+## Função
 
-Uma proposta de IA, hipótese ou implementação acidental não vira decisão sem sustentação.
+`decisoes/` registra escolhas tomadas com ator, escopo e contexto.
 
-## Regra transversal
-Este diretório participa de um corpus único e rastreável. Tags oferecem lentes de consulta; não duplicar o mesmo conteúdo apenas para classificá-lo. Fato, experiência, decisão, hipótese, tensão, lacuna e conteúdo proposto por IA devem permanecer distinguíveis. Todo agente deve preservar procedência e apontar para a fonte/evidência quando fizer afirmação material.
+Decisão não é hipótese, preferência solta, sugestão de IA ou inferência posterior.
 
-## Para agentes
-Codex, Gemini CLI, Cloud Code/Gemini Code Assist e outros agentes autorizados devem tratar o GitHub como estado canônico. Leiam `/AGENTS.md` antes de alterar conteúdo. Se faltar evidência, registrem a lacuna ou investigação adequada; não preencham por inferência silenciosa.
+## Estado pós-GOAL-010
+
+Os dez Goals estão concluídos. Decisões futuras devem orientar pipelines, produto, política de dados, interface e evolução do conhecimento.
+
+## Regra semântica
+
+Uma decisão só deve entrar aqui quando houver escolha explícita. Se houver dúvida, registrar em `hipoteses/` ou `investigacao/`.
