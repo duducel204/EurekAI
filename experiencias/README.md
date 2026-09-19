@@ -1,14 +1,23 @@
-# Experiências e evidências práticas
+# Experiências
 
-Registra coisas efetivamente feitas, testadas ou encontradas em contexto, preservando assistência de IA e resultado observável quando possível.
+**Estado atual:** área ativa de evidências práticas e inventários iniciais.
 
-## Eventos separados
-Exposição, uso, resultado, reaplicação, explicação e confirmação são eventos diferentes. Nenhum evento isolado significa “domínio”. Registre autoria/participação humano–IA sem atribuir ao humano conteúdo apenas proposto pela IA.
+## Função
 
-Inventários e auditorias existentes neste diretório são matéria-prima para o mapa, não certificados de competência.
+`experiencias/` registra ações, testes, observações práticas e inventários derivados de fontes.
 
-## Regra transversal
-Este diretório participa de um corpus único e rastreável. Tags oferecem lentes de consulta; não duplicar o mesmo conteúdo apenas para classificá-lo. Fato, experiência, decisão, hipótese, tensão, lacuna e conteúdo proposto por IA devem permanecer distinguíveis. Todo agente deve preservar procedência e apontar para a fonte/evidência quando fizer afirmação material.
+Ela sustenta conhecimento, relações e pedagogia, mas não transforma automaticamente qualquer ação em conclusão canônica.
 
-## Para agentes
-Codex, Gemini CLI, Cloud Code/Gemini Code Assist e outros agentes autorizados devem tratar o GitHub como estado canônico. Leiam `/AGENTS.md` antes de alterar conteúdo. Se faltar evidência, registrem a lacuna ou investigação adequada; não preencham por inferência silenciosa.
+## Arquivos atuais
+
+- `INVENTARIO-EVIDENCIAS-001.md`: primeiro inventário derivado de histórico parcial.
+- `INVENTARIO-EVIDENCIAS-002.md`: inventário complementar com lotes públicos e projetos versionados.
+- `AUDITORIA-EVIDENCIAS-001.md`: auditoria das evidências e limites de procedência.
+
+## Estado pós-GOAL-010
+
+A mineração inicial está concluída. A ampliação de experiências agora deve ocorrer por pipelines permanentes, com fonte, lote, localizador, limites e validação.
+
+## Regra semântica
+
+Experiência é observação/ação atribuível. Ela pode sustentar conhecimento, mas não prova domínio pessoal, autoria intelectual ou causalidade sem evidência adicional.
