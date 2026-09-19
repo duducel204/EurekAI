@@ -16,23 +16,46 @@ Goals posteriores devem ser refinados pelas evidências dos anteriores. Não exe
 - GOAL-002 — Aquisição de evidências e fila de investigação — CONCLUÍDO.
 - GOAL-003 — Mineração inicial e inventário — CONCLUÍDO COMO MINERAÇÃO INICIAL; ingestão incremental continua.
 - GOAL-004 — Modelar o conhecimento atual — CONCLUÍDO.
-- GOAL-005 — Relações, dependências e transferências — CONCLUÍDO.
-- GOAL-006 — Progressão do zero à fronteira atual — CONCLUÍDO.
-- GOAL-007 — Engenharia pedagógica atemporal — CONCLUÍDO.
-- GOAL-008 — Produção sistemática do conteúdo — SEED_DRAFT.
-- GOAL-009 — Auditoria, validação e correção — SEED_DRAFT.
-- GOAL-010 — Ingestão contínua e evolução — SEED_DRAFT.
+- GOAL-005 — Relações, dependências e transferências — CONCLUÍDO, REVALIDADO E VALIDADO.
+- GOAL-006 — Progressão do zero à fronteira atual — CONCLUÍDO, REVALIDADO E VALIDADO.
+- GOAL-007 — Engenharia pedagógica atemporal — CONCLUÍDO, REVALIDADO E VALIDADO.
+- GOAL-008 — Produção sistemática de unidades de conhecimento — PREPARADO; NÃO LIBERADO.
+- GOAL-009 — Auditoria, validação, correção e contrato de ingestão — PREPARADO; NÃO LIBERADO.
+- GOAL-010 — Evolução contínua e transição para pipelines permanentes — PREPARADO; NÃO LIBERADO.
+
+## Sequência concluída
+GOAL-005 → GOAL-006 → GOAL-007 foi executada, revalidada e validada. Relatórios estão em `execucoes/`.
 
 ## Sequência preparada
-GOAL-005 → GOAL-006 → GOAL-007 está preparada para execução sequencial condicional segundo [PROTOCOLO-EXECUCAO-SEQUENCIAL.md](PROTOCOLO-EXECUCAO-SEQUENCIAL.md).
+GOAL-008 → GOAL-009 → GOAL-010 está preparada para execução sequencial condicional segundo [PROTOCOLO-EXECUCAO-SEQUENCIAL.md](PROTOCOLO-EXECUCAO-SEQUENCIAL.md).
 
 Uma única autorização humana futura pode liberar a sequência inteira. O executor atravessa cada gate somente após validar a etapa anterior. Falha interrompe a sequência.
 
-## Macrofluxo
-fontes históricas → aquisição/investigação → evidências → inventário → modelo do conhecimento → relações/dependências → progressão → engenharia pedagógica → conteúdo → auditoria/validação → evolução contínua.
+## Macrofluxo atualizado
+fontes históricas → aquisição/investigação → evidências → inventário → modelo do conhecimento → relações/dependências → progressão → engenharia pedagógica → unidades de conhecimento → auditoria/validação → contrato de ingestão → pipelines permanentes.
+
+## Bootstrap vs operação contínua
+GOAL-001–010 compõem o bootstrap inicial do EurekAI.
+
+Após GOAL-010, novas fontes e grandes corpora devem entrar por pipelines permanentes, não por uma sequência infinita de novos Goals ad hoc.
+
+Fluxo operacional candidato:
+
+`nova fonte → inventário → indexação → classificação → mineração seletiva → validação → canonização → atualização de conhecimento/pedagogia/conteúdo → auditoria`
+
+## Caso de uso de referência
+Google Takeout/Drive é o primeiro caso candidato de operação contínua:
+
+- `Takeout/Gemini` — metadados/configuração;
+- `Takeout/NotebookLM` — notebooks organizados;
+- `Takeout/Gemini no Workspace/Conversation History` — histórico bruto de conversas.
+
+O Google Drive permanece fonte. GitHub permanece estado canônico.
 
 ## Princípio de velocidade
-Acelerar significa reduzir trabalho manual, duplicação, espera e releitura — não remover controles de evidência. Automatizar etapas seguras e gates verificáveis.
+Acelerar significa reduzir trabalho manual, duplicação, espera, releitura e consumo desnecessário de contexto — não remover controles de evidência.
+
+Código determinístico deve fazer inventário, hash, fila, contagem e deduplicação. LLM deve ser reservado para classificação, mineração seletiva, síntese, revisão cognitiva e decisões interpretativas.
 
 ## Pesquisa distribuída
 Lacunas podem gerar investigações para Codex, ChatGPT, Gemini/Cloud Code, outras IAs, André, repositórios, arquivos ou documentação. GitHub é memória canônica das perguntas, evidências incorporadas, decisões e estado.
