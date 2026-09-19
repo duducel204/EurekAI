@@ -1,6 +1,6 @@
 # GOAL-008 — Produção sistemática de unidades de conhecimento
 
-**Status:** PREPARADO — NÃO LIBERADO
+**Status:** CONCLUÍDO
 **Executor-alvo:** QUALQUER EXECUTOR AUTORIZADO
 **Dependência:** GOAL-007 concluído, revalidado e validado
 **Sequência:** primeiro passo da sequência 008→009→010

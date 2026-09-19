@@ -29,20 +29,16 @@ Não gravar aqui um SHA como “versão atual permanente”. O agente deve consu
 - GOAL-005 — concluído, revalidado e validado
 - GOAL-006 — concluído, revalidado e validado
 - GOAL-007 — concluído, revalidado e validado
-- GOAL-008 — preparado; não liberado
-- GOAL-009 — preparado; não liberado
-- GOAL-010 — preparado; não liberado
+- GOAL-008 — concluído
+- GOAL-009 — concluído
+- GOAL-010 — concluído
 
 A sequência 005→006→007 foi completamente liberada, executada, revalidada semanticamente/epistemologicamente e teve validação mecânica executada no ambiente Code, informada pelo operador humano como aprovada. Os relatórios em `execucoes/` preservam a distinção entre essas camadas de validação.
 
-A sequência 008→009→010 está preparada para execução sequencial condicional. Ela incorpora a visão de que GOAL-001–010 formam o bootstrap inicial do EurekAI e que, após o GOAL-010, novas fontes devem entrar por pipelines permanentes.
+A sequência 008→009→010 foi autorizada, executada e validada em gates condicionais. GOAL-001–010 formam o bootstrap inicial do EurekAI; novas fontes rotineiras entram por pipelines permanentes.
 
-## Próximo foco preparado
-GOAL-008 inicia a produção de unidades de conhecimento rastreáveis.
-
-GOAL-009 audita o lote do GOAL-008 e consolida o contrato de ingestão/classificação/mineração.
-
-GOAL-010 encerra o bootstrap inicial e define a transição para pipelines permanentes, usando Google Takeout/Drive como primeiro caso candidato de operação contínua.
+## Próximo foco operacional
+Revisar e incorporar a sequência 008→010. Depois, preparar a primeira execução autorizada da pipeline Google Takeout/Drive: política de dados e inventário determinístico antes de classificação ou mineração. A pipeline está definida, mas nenhum Takeout foi acessado ou processado.
 
 ## Regra de trabalho multiagente
 Ao iniciar trabalho, registrar o SHA de `origin/main` usado como base.

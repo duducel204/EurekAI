@@ -39,6 +39,7 @@ def main() -> int:
         run("repo_state.py", *state_args),
         run("validate_tags.py"),
         run("validate_links.py"),
+        run("validate_knowledge_units.py"),
     ]
 
     failed = [code for code in results if code != 0]
