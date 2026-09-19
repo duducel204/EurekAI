@@ -1,12 +1,17 @@
 # Descobertas
 
-Percepções e conexões relevantes surgidas durante estudo, prática ou desenvolvimento — inclusive estalos que reorganizam um modelo mental.
+**Estado atual:** área reservada para achados relevantes.
 
-## Uso
-Registre a percepção e o que a sustenta. Quando uma descoberta ainda for apenas interpretação, marque-a como hipótese. Quando gerar decisão, investigação, relação ou material pedagógico, aponte para o destino em vez de duplicar o texto.
+## Função
 
-## Regra transversal
-Este diretório participa de um corpus único e rastreável. Tags oferecem lentes de consulta; não duplicar o mesmo conteúdo apenas para classificá-lo. Fato, experiência, decisão, hipótese, tensão, lacuna e conteúdo proposto por IA devem permanecer distinguíveis. Todo agente deve preservar procedência e apontar para a fonte/evidência quando fizer afirmação material.
+`descobertas/` registra percepções ou achados que mudam a compreensão do projeto, desde que tenham origem rastreável.
 
-## Para agentes
-Codex, Gemini CLI, Cloud Code/Gemini Code Assist e outros agentes autorizados devem tratar o GitHub como estado canônico. Leiam `/AGENTS.md` antes de alterar conteúdo. Se faltar evidência, registrem a lacuna ou investigação adequada; não preencham por inferência silenciosa.
+Descoberta não é decisão, nem hipótese não testada, nem simples sugestão.
+
+## Estado pós-GOAL-010
+
+As descobertas futuras devem surgir de pipelines, auditorias, validações, produto ou investigação do corpus.
+
+## Regra semântica
+
+Uma descoberta deve declarar o que foi observado, por que isso muda o entendimento e qual evidência sustenta a mudança.
