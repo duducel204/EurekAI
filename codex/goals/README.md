@@ -26,6 +26,8 @@ Após GOAL-010, esta pasta deixa de ser fila principal de trabalho. Novas fontes
 
 Todos os Goals 001–010 estão concluídos no estado canônico atual.
 
+Não há Goal aberto nem arquivo no gate `READY_FOR_CODEX`. O processamento rotineiro de novas fontes deve seguir os contratos em `pipelines/`.
+
 ## Arquivos principais
 
 - `ROADMAP-GOALS.md`: histórico e macrofluxo dos Goals.

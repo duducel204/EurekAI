@@ -15,12 +15,15 @@ O repositório é o motor interno: memória, evidências, unidades de conhecimen
 ## Estado operacional
 
 - GOAL-001–010: concluídos.
+- Goals abertos ou em `READY_FOR_CODEX`: nenhum.
 - Bootstrap inicial: encerrado.
 - Modo atual: operação contínua por pipelines.
 - Primeiro caso candidato: Google Takeout/Drive.
 - Takeout/Drive: pipeline definida, mas nenhum Takeout foi processado ou canonizado.
 - EKL-0: schema compacto preparado para classificação/mineração futura do histórico/Takeout, sem execução real ainda.
 - Corpus histórico: ainda parcial; a pendência é acompanhada em [investigacao/pendencias/INV-001-CORPUS-HISTORICO.md](investigacao/pendencias/INV-001-CORPUS-HISTORICO.md).
+
+A primeira execução real da pipeline Takeout/Drive ainda exige autorização do diretório de origem e definição da política de dados. Nenhuma automação local de execução de Goals faz parte do estado canônico atual.
 
 ## Para quem começa do zero
 

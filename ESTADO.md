@@ -52,11 +52,13 @@ O produto final é uma experiência de alfabetização em inteligência artifici
 
 Modo atual: **pós-bootstrap / operação contínua por pipelines**.
 
+Não há Goal aberto nem Goal no gate `READY_FOR_CODEX`. A automação local que observava esse gate foi removida e não integra o estado canônico do repositório.
+
 Próximo foco operacional recomendado:
 
-1. manter READMEs e ponteiros coerentes com o estado pós-GOAL-010;
-2. preparar a primeira execução autorizada da pipeline Google Takeout/Drive;
-3. iniciar por política de dados e inventário determinístico;
+1. autorizar o diretório real e definir a política de dados da primeira execução Google Takeout/Drive;
+2. validar o EKL-0 em amostra artificial ou pequena amostra explicitamente autorizada;
+3. executar o inventário local determinístico antes de ler ou classificar conteúdo;
 4. usar EKL-0, quando apropriado, para classificação/mineração compacta;
 5. somente depois validar, expandir e canonizar resultados aprovados.
 
