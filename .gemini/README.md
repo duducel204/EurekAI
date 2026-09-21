@@ -1,21 +1,15 @@
-# .gemini — configuração e skills da ferramenta
+# .gemini
 
-Esta pasta pertence à camada operacional do Gemini/Google no workspace.
+**Estado atual:** configuração e skills do ambiente Gemini; não é corpus canônico do EurekAI.
 
-## O que pode viver aqui
-- skills instaladas para Gemini;
-- manifestos e metadados da própria ferramenta;
-- configuração compartilhável necessária para o ambiente Gemini.
+## Função
 
-## O que esta pasta NÃO significa
-A presença de uma skill ou integração aqui **não** significa que a tecnologia correspondente foi adotada pela arquitetura do EurekAI, nem que existe conhecimento pessoal validado sobre ela.
+`.gemini/` contém configuração de ferramenta, skills e referências operacionais do ambiente Gemini/Cloud Code.
 
-Exemplos:
-- skill de BigQuery disponível ≠ EurekAI usa BigQuery;
-- skill de Spark disponível ≠ Spark faz parte da solução;
-- acesso a um serviço ≠ decisão de incorporá-lo.
+## Estado pós-GOAL-010
 
-## Regra
-Conteúdo gerado/instalado por ferramenta deve permanecer identificado como tooling. Quando surgir conhecimento, decisão, evidência ou experiência relevante, promova somente o que estiver sustentado para a pasta semântica correta seguindo `/AGENTS.md`.
+As skills podem apoiar pipelines e execuções, mas não representam conhecimento validado do projeto por si mesmas.
 
-Não armazenar credenciais, tokens, ADC, chaves ou logs sensíveis no Git.
+## Regra semântica
+
+Configuração de ferramenta não é decisão arquitetural do EurekAI. Capacidade disponível não significa uso aprovado, execução realizada ou conhecimento canonizado.

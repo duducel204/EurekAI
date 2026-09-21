@@ -1,15 +1,34 @@
 # Conhecimento
 
-Área para material que já passou por estruturação suficiente para ser reutilizado como conhecimento, sem apagar sua procedência ou grau de confirmação.
+**Estado atual:** área ativa. O contrato de unidade de conhecimento está definido e o primeiro lote de unidades foi produzido e auditado.
 
-## Princípio
-Não organizar cedo demais em uma árvore rígida. O mesmo conhecimento pode ser recuperado por tags e relações. Níveis pedagógicos serão derivados depois; não confundir “onde o arquivo está” com “quanto alguém sabe”.
+## Função
 
-## Promoção
-Sempre que possível, um item estruturado deve apontar para evidências/fontes e distinguir observação de interpretação. Conteúdo dependente de versão/ferramenta deve indicar esse limite para não parecer atemporal.
+`conhecimento/` guarda conhecimento estruturado, rastreável e reutilizável.
 
-## Regra transversal
-Este diretório participa de um corpus único e rastreável. Tags oferecem lentes de consulta; não duplicar o mesmo conteúdo apenas para classificá-lo. Fato, experiência, decisão, hipótese, tensão, lacuna e conteúdo proposto por IA devem permanecer distinguíveis. Todo agente deve preservar procedência e apontar para a fonte/evidência quando fizer afirmação material.
+Não é área para entrada bruta, brainstorming solto, logs operacionais ou decisões sem evidência.
 
-## Para agentes
-Codex, Gemini CLI, Cloud Code/Gemini Code Assist e outros agentes autorizados devem tratar o GitHub como estado canônico. Leiam `/AGENTS.md` antes de alterar conteúdo. Se faltar evidência, registrem a lacuna ou investigação adequada; não preencham por inferência silenciosa.
+## Arquivos atuais
+
+- `CONTRATO-UNIDADE-DE-CONHECIMENTO.md`: define os campos mínimos e a estrutura de uma unidade de conhecimento.
+- `UNIDADES-001.md`: primeiro lote produzido no GOAL-008 e auditado no GOAL-009.
+
+## Situação pós-GOAL-010
+
+As unidades atuais provam o formato, não esgotam o corpus. Novas unidades devem surgir por pipelines permanentes depois de inventário, classificação, mineração seletiva e validação.
+
+## Critério de entrada
+
+Um item só deve entrar aqui quando houver:
+
+- origem rastreável;
+- evidência ou lacuna explícita;
+- separação entre fato, hipótese e decisão;
+- tags válidas;
+- confiança declarada;
+- conexão com pedagogia ou uso futuro;
+- validação suficiente para canonização.
+
+## Regra semântica
+
+Conhecimento estruturado não é o mesmo que pedagogia. `conhecimento/` guarda o que se sabe e sob quais limites; `pedagogia/` transforma isso em progressão de aprendizagem.

@@ -1,19 +1,76 @@
-# Pipelines permanentes do EurekAI
+# Pipelines
 
-Esta área contém contratos de operação contínua. GitHub é o estado canônico; fontes grandes permanecem em seus locais autorizados. Pipelines não aprovam ou mesclam PRs automaticamente.
+**Estado atual:** área operacional principal pós-GOAL-010.
 
-## Pipelines mínimas
+## Função
 
-| Pipeline | Entrada | Saída canônica | Gate |
-| --- | --- | --- | --- |
-| **Ingestão** | nova fonte autorizada | manifesto, índice, classificação e evidências derivadas | contrato de ingestão + validação |
-| **Auditoria** | evidências/unidades candidatas | aceitar, corrigir, rejeitar ou investigar | procedência e limites aprovados |
-| **Pedagogia/conteúdo** | conhecimento validado | progressões e unidades versionadas | mecanismo separado de representação/exemplo |
-| **Investigação** | lacuna/tensão material | evidência incorporada ou bloqueio explícito | ticket com critério de fechamento |
-| **Publicação/exportação futura** | conteúdo auditado | formato de destino ainda não decidido | autorização humana específica; não ativo agora |
+`pipelines/` define como novas fontes entram no EurekAI depois do bootstrap.
 
-## Estado comum
+Esta pasta substitui a ideia de criar Goals infinitos para cada rotina. O fluxo normal agora é pipeline permanente, retomável e auditável.
 
-Cada execução usa `run_id`, versão do contrato, fonte/lote, cursor, itens por estado, erros, hashes de entrada/saída e commit/PR de destino. O estado operacional volumoso ou sensível permanece fora do Git; o repositório recebe manifestos compactos e artefatos canônicos revisáveis.
+## Arquivos atuais
 
-O [contrato de ingestão](CONTRATO-INGESTAO.md) rege fontes novas. [PIPELINE-TAKEOUT-DRIVE.md](PIPELINE-TAKEOUT-DRIVE.md) é o primeiro candidato e ainda não foi executado.
+- `CONTRATO-INGESTAO.md`: contrato geral de ingestão incremental.
+- `PIPELINE-TAKEOUT-DRIVE.md`: pipeline candidata para Google Takeout/Drive.
+- `schemas/`: contratos de formatos intermediários compactos para pipeline.
+
+## Schemas compactos
+
+`schemas/` contém o EKL-0 — **EurekAI Compact Language v0**.
+
+EKL-0 é um schema compacto experimental para classificação e mineração do histórico/Takeout. Ele reduz repetição de cabeçalhos e metadados, preservando procedência mínima e significado semântico.
+
+Arquivos principais:
+
+- `schemas/README.md`: índice da área.
+- `schemas/EKL-0-DICIONARIO.md`: códigos e campos canônicos.
+- `schemas/EKL-0-CLASSIFICACAO-TAKEOUT.md`: saída compacta para classificação leve.
+- `schemas/EKL-0-MINERACAO-TAKEOUT.md`: saída compacta para mineração seletiva.
+
+EKL-0 é intermediário e pré-canonização. Não substitui documentação humana, unidades de conhecimento, decisões canonizadas, auditoria ou produto final.
+
+## Estado pós-bootstrap
+
+- GOAL-001–010 concluídos.
+- Pipelines permanentes definidas como próximo modo de operação.
+- Google Takeout/Drive definido como primeiro caso candidato.
+- Nenhum Takeout foi processado ou canonizado ainda.
+- EKL-0 preparado como linguagem compacta para etapas futuras de classificação/mineração, sem executar leitura real.
+
+## Regra operacional
+
+Uma pipeline deve seguir a ordem:
+
+```text
+fonte → manifesto → inventário → indexação → deduplicação → classificação → mineração seletiva → validação → canonização
+```
+
+Código determinístico deve cuidar de descoberta, hashes, contagens, filas, checkpoints e validação mecânica.
+
+LLM deve ser reservado para classificação semântica, mineração seletiva, síntese, revisão epistemológica e pedagogia.
+
+EKL-0 pode ser usado como formato de saída nas etapas de classificação e mineração seletiva.
+
+## Regra de custo e contexto
+
+Não enviar corpus inteiro para LLM. Cada conversa, documento ou artefato deve ser processado como unidade de trabalho delimitada.
+
+A lógica compacta é:
+
+```text
+schema fixo documentado uma vez
+↓
+registro EKL-0 compacto por item
+↓
+validação mecânica
+↓
+expansão quando necessário
+↓
+validação semântica
+↓
+canonização humana
+```
+
+## Relação com o produto
+
+As pipelines alimentam o motor interno. Elas não são a experiência do usuário final. O produto por link está documentado em `produto/`.

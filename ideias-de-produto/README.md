@@ -1,12 +1,17 @@
 # Ideias de produto
 
-Possibilidades derivadas da base EurekAI: experiências educacionais, trilhas guiadas, site, aplicativo, jogo e outros formatos.
+**Estado atual:** área de possibilidades derivadas; não é visão canônica do produto.
 
-## Fronteira
-Ideia não é decisão nem roadmap de implementação. Preserve a conexão com a necessidade/descoberta que a originou. Validação comercial, pedagógica e técnica deve acontecer antes de promoção para execução.
+## Função
 
-## Regra transversal
-Este diretório participa de um corpus único e rastreável. Tags oferecem lentes de consulta; não duplicar o mesmo conteúdo apenas para classificá-lo. Fato, experiência, decisão, hipótese, tensão, lacuna e conteúdo proposto por IA devem permanecer distinguíveis. Todo agente deve preservar procedência e apontar para a fonte/evidência quando fizer afirmação material.
+`ideias-de-produto/` guarda variações, oportunidades, extensões e possibilidades ainda não aprovadas.
 
-## Para agentes
-Codex, Gemini CLI, Cloud Code/Gemini Code Assist e outros agentes autorizados devem tratar o GitHub como estado canônico. Leiam `/AGENTS.md` antes de alterar conteúdo. Se faltar evidência, registrem a lacuna ou investigação adequada; não preencham por inferência silenciosa.
+A visão canônica inicial do produto está em `produto/VISAO-ORIGINAL.md`.
+
+## Estado pós-GOAL-010
+
+Ideias futuras podem surgir de aprendizagem, pipeline, feedback de usuário, mercado ou experimentos. Elas não alteram a direção do produto sem decisão explícita.
+
+## Regra semântica
+
+Ideia de produto não é MVP aprovado. Ideia lúdica, jogo, trilha avançada ou monetização deve ser tratada como camada posterior até validação.

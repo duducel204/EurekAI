@@ -1,46 +1,31 @@
 # Agentes
 
-Camada de interoperabilidade para agentes que colaboram no EurekAI. Guarda contratos e adaptadores mínimos; **não** cria cópias do conhecimento por ferramenta.
+**Estado atual:** contrato multiagente ativo. Bootstrap 001–010 concluído.
 
-## Princípio
-`mesmo GitHub + mesmas evidências + mesmos estados → agentes diferentes → contribuições complementares`.
+## Função
 
-## Memória operacional
-Sessões de agentes são voláteis. O repositório deve ser suficiente para reconstruir contexto e regras depois que uma conversa for encerrada.
+`agentes/` define como Codex, Gemini, Cloud Code/Gemini Code Assist, ChatGPT e futuros agentes devem colaborar sem depender de memória de sessão.
 
-Ao iniciar nova sessão, todo agente deve executar `git fetch origin`, conferir `/ESTADO.md`, reler `/AGENTS.md`, `/agentes/INDEX.md`, seu adaptador, o README da área afetada e o Goal/INV aplicável antes de agir.
+## Arquivos atuais
 
-## Papéis atuais
-- **Codex:** executor principal do workflow orientado a Goals e mudanças versionadas.
-- **Gemini CLI:** exploração, pesquisa, análise, automação CLI e uso de capacidades Google/MCP quando autorizado.
-- **Cloud Code / Gemini Code Assist:** trabalho sobre workspace, código e ecossistema Google Cloud, sem assumir que capacidade disponível virou arquitetura.
-- **ChatGPT:** planejamento, síntese, auditoria e coordenação quando conectado às fontes necessárias.
+- `INDEX.md`: protocolo resumido de retomada e validação de versão.
+- `codex/README.md`: adaptador do Codex.
+- `gemini/README.md`: adaptador do Gemini.
+- `cloud-code/README.md`: adaptador do Cloud Code/Gemini Code Assist.
 
-Papéis são preferências operacionais, não exclusividade. O Goal e as permissões determinam o que cada agente pode fazer.
+## Ordem mínima de leitura para agentes
 
-## Onde cada tipo de coisa deve viver
-- regras entre agentes → `agentes/`;
-- configuração Gemini/Google → `.gemini/`;
-- configuração de editor → `.vscode/`;
-- scripts/utilitários compartilhados → `ferramentas/`;
-- Goals/retornos do Codex → `codex/`;
-- conhecimento/evidência/contexto → somente nas pastas semânticas correspondentes.
+1. `ESTADO.md`
+2. `AGENTS.md`
+3. `agentes/INDEX.md`
+4. adaptador específico do agente
+5. `produto/VISAO-ORIGINAL.md` quando a tarefa tocar produto, interface ou conteúdo
+6. README da área afetada
 
-Nenhum agente deve usar uma pasta semântica como “depósito genérico” de scripts ou configuração.
+## Estado pós-GOAL-010
 
-## Limites importantes
-- `codex/retornos/` é saída do workflow Codex; outros agentes só escrevem ali quando explicitamente autorizados.
-- `conhecimento/` estrutura conhecimento.
-- `pedagogia/` transforma conhecimento em aprendizagem.
-- capacidade instalada não equivale a decisão arquitetural.
+O repositório entrou em modo de pipelines permanentes. Agentes não devem reabrir os Goals concluídos nem tratar rascunhos obsoletos como estado atual.
 
-## Regra de entrada
-Todo agente começa em `/AGENTS.md`, depois lê o README da área e o Goal/pendência relevante. Adaptações específicas devem apontar de volta para o contrato comum.
+## Regra semântica
 
-## Regra de concorrência
-A base de trabalho é o SHA de `origin/main` observado no início. Antes de commit/push/PR, buscar novamente o remoto e comparar. Se `main` avançou, revisar e reconciliar antes de publicar. O procedimento curto está em `INDEX.md`.
-
-## Regra de saída
-Resultado relevante volta como mudança rastreável, evidência, retorno ou investigação. Sessão de chat não é armazenamento canônico.
-
-Configuração de uma ferramenta pode permanecer apenas como configuração; ela não precisa ser promovida ao conhecimento do EurekAI.
+Capacidade de agente, configuração local, artefato operacional, decisão do projeto e conhecimento canônico são coisas diferentes.

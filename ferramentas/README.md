@@ -1,108 +1,44 @@
-# Ferramentas compartilhadas
+# Ferramentas
 
-Área para scripts e utilitários que servem ao EurekAI como projeto, independentemente de um agente específico.
+**Estado atual:** utilitários compartilhados ativos para validação, estado e checks.
 
-A ideia é simples: **se Codex, Gemini/Cloud Code e um humano precisam fazer a mesma verificação, ela é candidata a viver aqui**.
+## Função
 
-## Ferramentas atuais
+`ferramentas/` contém scripts e utilitários revisáveis usados pelo EurekAI.
 
-### `repo_state.py` — versão e concorrência
-Verificação read-only do estado Git.
+Ferramentas não são conhecimento canônico. Elas executam verificações, inventários ou apoio operacional.
 
-Mostra branch, HEAD local, HEAD remoto de `origin/main`, working tree e, quando recebe a base usada no início do trabalho, informa se essa base ficou antiga e lista arquivos alterados desde então.
+## Scripts atuais
 
-```bash
-python ferramentas/repo_state.py
-python ferramentas/repo_state.py --base <BASE_MAIN_SHA>
-```
+- `repo_state.py`: valida base/estado de repositório e concorrência.
+- `validate_tags.py`: valida tags canônicas.
+- `validate_links.py`: valida links Markdown relativos.
+- `validate_goal_sequence.py`: valida estrutura da sequência 005→007.
+- `validate_knowledge_units.py`: valida IDs e campos obrigatórios de unidades de conhecimento.
+- `validate_ekl.py`: valida registros EKL-0 em JSONL para classificação ou mineração.
+- `expand_ekl.py`: expande registros EKL-0 compactos para JSON humano.
+- `check_all.py`: agregador de validações.
+- `pre_commit_check.py`: apoio de pré-commit/checks locais.
 
-Se a base ficou antiga, retorna código `2`: isso significa **revisar/reconciliar antes de publicar**, não erro destrutivo.
+## EKL-0
 
-### `validate_tags.py` — tags canônicas
-Confere linhas explícitas `Tags:` nos Markdown do corpus contra `mapa-do-conhecimento/INDEX-TAGS.md`.
+As ferramentas EKL-0 servem à preparação da leitura do histórico/Takeout.
 
-```bash
-python ferramentas/validate_tags.py
-```
-
-Não escaneia `.gemini/`, porque skills de ferramenta não pertencem ao corpus canônico.
-
-### `validate_links.py` — links internos
-Confere links Markdown relativos entre arquivos do repositório, ignorando URLs externas, anchors e conteúdo de tooling em `.gemini/`.
+Uso esperado:
 
 ```bash
-python ferramentas/validate_links.py
+python ferramentas/validate_ekl.py saida-classificacao.jsonl --mode classificacao
+python ferramentas/validate_ekl.py saida-mineracao.jsonl --mode mineracao
+python ferramentas/expand_ekl.py saida-classificacao.jsonl --mode classificacao --pretty
+python ferramentas/expand_ekl.py saida-mineracao.jsonl --mode mineracao --pretty
 ```
 
-### `validate_goal_sequence.py` — preflight estrutural da sequência 005→006→007
-Confere se os três Goals preparados possuem dependências e seções mínimas de execução/validação.
+Esses scripts validam e expandem forma. Não provam verdade semântica e não canonizam conteúdo.
 
-```bash
-python ferramentas/validate_goal_sequence.py
-```
+## Estado pós-GOAL-010
 
-Esse teste é estrutural: não substitui Acceptance nem validação semântica de cada Goal.
+As ferramentas devem continuar servindo pipelines, auditorias e PRs. Novas ferramentas devem ser determinísticas sempre que possível.
 
-### `check_all.py` — preflight comum
-Executa as verificações compartilhadas acima.
+## Regra semântica
 
-```bash
-python ferramentas/check_all.py
-python ferramentas/check_all.py --base <BASE_MAIN_SHA>
-```
-
-É o comando preferencial antes de commit/push/PR quando o ambiente possui Python.
-
-## Fluxo multiagente recomendado
-
-Ao começar:
-
-```bash
-git fetch origin
-git rev-parse origin/main
-```
-
-Guarde o SHA como `BASE_MAIN_SHA`.
-
-Antes de publicar:
-
-```bash
-python ferramentas/check_all.py --base <BASE_MAIN_SHA>
-```
-
-Se `repo_state.py` indicar `STALE`, revise o que entrou em `main`, confira conflito textual **e semântico**, reconcilie e rode o preflight novamente.
-
-## Entram aqui
-- validações mecânicas;
-- utilitários de auditoria;
-- scripts reprodutíveis;
-- preflights de versão/concorrência;
-- automações compartilhadas entre Codex, Gemini/Cloud Code e humanos.
-
-## Não entram aqui
-- skills exclusivas do Gemini/Google;
-- runtime/locks do Codex;
-- credenciais;
-- lógica que canonize conhecimento automaticamente;
-- ferramentas que façam merge, aprovação ou escrita destrutiva sem gate explícito.
-
-## Regras
-- preferir Python standard library quando isso aumentar portabilidade entre Windows, Cloud Shell e outros ambientes;
-- usar caminhos relativos ao repositório;
-- não conter segredos ou credenciais;
-- ser read-only por padrão;
-- não usar `git add .` indiscriminadamente;
-- não aprovar o próprio PR;
-- não habilitar auto-merge sem decisão explícita;
-- não escrever em `main` silenciosamente;
-- documentar entrada, saída, pré-requisitos, códigos de saída e efeitos colaterais.
-
-## Candidatas futuras — só se houver necessidade real
-- auditor geral de coerência entre status dos Goals e roadmap;
-- detector de arquivos sensíveis/segredos antes de publicação;
-- gerador de handoff mínimo;
-- auditor de procedência/localizadores de evidência.
-
-Não criar ferramentas apenas por antecipação. Cada nova ferramenta deve resolver um problema observado por mais de um agente ou reduzir um risco recorrente.
-
-Ferramentas específicas de um agente ficam na área nativa correspondente, como `.gemini/`. Esta pasta não é parte do corpus pedagógico; é infraestrutura compartilhada de construção.
+Validação mecânica não substitui validação semântica. Um check pode dizer que links, tags, campos e códigos existem; não prova que a interpretação está correta.

@@ -1,17 +1,21 @@
 # Investigação
 
-Fila de perguntas materiais que exigem fonte adicional, pesquisa ou validação. Uma pendência é ticket de conhecimento, não artigo.
+**Estado atual:** área ativa de lacunas. O bootstrap 001–010 está concluído, mas há pendências reais.
 
-## Quando criar
-Somente quando a lacuna bloquear/alterar materialmente um Goal ou mapa, exigir ação externa ou envolver tensão relevante. Use IDs `INV-NNN`.
+## Função
 
-## Ciclo
-`ABERTA → EM INVESTIGAÇÃO → PARCIAL/RESOLVIDA/BLOQUEADA`. O retorno deve registrar fonte consultada, escopo/data, evidência e localizador, interpretação separada, incertezas e o que falta. Ao resolver, aponte para a evidência incorporada; não duplique o resultado.
+`investigacao/` registra perguntas, lacunas, bloqueios e pendências que ainda não podem ser tratadas como conhecimento canônico.
 
-Pesquisadores podem ser Codex, ChatGPT, Gemini, outros agentes ou humanos. O agente escolhido não muda o padrão de procedência.
+## Pendência atual principal
 
-## Regra transversal
-Este diretório participa de um corpus único e rastreável. Tags oferecem lentes de consulta; não duplicar o mesmo conteúdo apenas para classificá-lo. Fato, experiência, decisão, hipótese, tensão, lacuna e conteúdo proposto por IA devem permanecer distinguíveis. Todo agente deve preservar procedência e apontar para a fonte/evidência quando fizer afirmação material.
+- `pendencias/INV-001-CORPUS-HISTORICO.md`: localizar, selecionar e validar corpus histórico da trajetória.
 
-## Para agentes
-Codex, Gemini CLI, Cloud Code/Gemini Code Assist e outros agentes autorizados devem tratar o GitHub como estado canônico. Leiam `/AGENTS.md` antes de alterar conteúdo. Se faltar evidência, registrem a lacuna ou investigação adequada; não preencham por inferência silenciosa.
+## Estado pós-GOAL-010
+
+A existência de pipelines permanentes não elimina investigações. Ela muda a forma de resolvê-las: cada lacuna deve apontar para fonte, acesso, inventário, evidência e critério de fechamento.
+
+## Regra semântica
+
+Uma pendência deve permanecer pendência enquanto faltar evidência, localizador, permissão, data, ator, resultado ou validação.
+
+Não marcar investigação como concluída apenas para harmonizar estado visual. Conclusão exige critério de fechamento satisfeito.

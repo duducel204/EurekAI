@@ -1,39 +1,44 @@
-# Goals
+# Goals — EurekAI
 
-Goals são contratos de trabalho convergidos para execução. Eles transformam planejamento em uma unidade verificável sem exigir que o executor reconstrua a conversa de origem.
+**Estado atual:** GOAL-001–010 concluídos. Esta pasta preserva o bootstrap inicial do EurekAI e seus protocolos de execução.
 
-## Um Goal deve conter
-Intenção/objetivo, dependências, estado, operação, restrições, entregáveis, critérios de aceitação, validação, stop conditions e retorno esperado.
+## Função desta pasta
 
-## Dois gates operacionais
+`codex/goals/` registra os Goals que estruturaram a fundação inicial do projeto:
 
-### `READY_FOR_CODEX` — gate de entrada
-O nome é **legado**.
+- contrato operacional;
+- aquisição e investigação;
+- mineração inicial;
+- modelo de conhecimento;
+- relações;
+- progressão pedagógica;
+- engenharia pedagógica atemporal;
+- produção sistemática de unidades de conhecimento;
+- auditoria e contrato de ingestão;
+- transição para pipelines permanentes.
 
-A partir da canonização da execução multiagente, `READY_FOR_CODEX` significa **PRONTO PARA EXECUTOR AUTORIZADO**. O executor pode ser Codex, Gemini/Cloud Code, humano ou outro agente autorizado.
+Após GOAL-010, esta pasta deixa de ser fila principal de trabalho. Novas fontes e rotinas devem entrar por `pipelines/`, salvo decisão explícita de criar novo Goal estrutural.
 
-Manter o literal evita quebrar automações existentes enquanto a semântica passa a ser genérica.
+## Gates
 
-### `CONCLUÍDO` — gate de saída
-Só usar após entregáveis, Acceptance e validações terem sido cumpridos e existir retorno/handoff auditável.
+- `READY_FOR_CODEX` — nome legado; significa pronto para qualquer executor autorizado.
+- `CONCLUÍDO` — execução validada e encerrada.
 
-## Estados de preparação
-`SEED_DRAFT`, `DRAFT_EVOLUTIVO` e `PREPARADO` não autorizam execução por si só.
+Todos os Goals 001–010 estão concluídos no estado canônico atual.
 
-Bloqueios devem ser explícitos.
+## Arquivos principais
 
-## Execução sequencial
-O protocolo canonizado está em [PROTOCOLO-EXECUCAO-SEQUENCIAL.md](PROTOCOLO-EXECUCAO-SEQUENCIAL.md).
+- `ROADMAP-GOALS.md`: histórico e macrofluxo dos Goals.
+- `PROTOCOLO-EXECUCAO-SEQUENCIAL.md`: regra de execução encadeada.
+- `DIRETRIZ-TRANSVERSAL-DERIVACAO-REUTILIZAVEL.md`: regra para derivar conhecimento reutilizável sem convergência prematura.
+- `GOAL-001...GOAL-010...`: escopo de cada Goal concluído.
 
-Uma sequência explicitamente autorizada pode promover automaticamente o próximo Goal para `READY_FOR_CODEX` **somente depois** que a dependência anterior atingir `CONCLUÍDO` com validação.
+## Regra pós-bootstrap
 
-## Pipeline sobreposto
-Enquanto N executa, N+1 pode amadurecer e N+2... podem receber sementes. Dependência não observada impede promoção prematura para READY, mas não impede exploração.
+Não usar esta pasta para abrir uma sequência infinita de Goals operacionais. O fluxo normal agora é:
 
-## Regra transversal
-Este diretório participa de um corpus único e rastreável. Tags oferecem lentes de consulta; não duplicar o mesmo conteúdo apenas para classificá-lo. Fato, experiência, decisão, hipótese, tensão, lacuna e conteúdo proposto por IA devem permanecer distinguíveis. Todo agente deve preservar procedência e apontar para a fonte/evidência quando fizer afirmação material.
+```text
+nova fonte → pipeline → inventário → classificação → mineração seletiva → validação → canonização
+```
 
-## Para agentes
-Qualquer executor autorizado deve tratar o GitHub como estado canônico, ler `/ESTADO.md`, `/AGENTS.md` e `/agentes/INDEX.md`, registrar a base usada e validar a versão atual antes de publicar.
-
-Novos relatórios multiagente devem preferir `/execucoes/`.
+Goals futuros só devem existir se houver mudança estrutural no projeto, não para processar rotina.
