@@ -1,0 +1,41 @@
+name: EurekAI CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: eurekai-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Ensure origin/main reference
+        run: git fetch origin +refs/heads/main:refs/remotes/origin/main
+
+      - name: Check Python syntax
+        run: python -m compileall -q ferramentas
+
+      - name: Run EurekAI canonical checks
+        run: python ferramentas/check_all.py
