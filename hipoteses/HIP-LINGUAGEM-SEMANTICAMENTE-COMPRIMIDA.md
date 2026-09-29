@@ -1,6 +1,6 @@
 # Hipótese — linguagem semanticamente comprimida humano–IA
 
-**Estado:** experimental; ainda não validada  
+**Estado:** hipótese verificada no uso com o autor; generalização ainda não validada  
 **Origem:** interação humano–IA em 2026-09-28  
 **Relações:** `pipelines/schemas/EKL-0-DICIONARIO.md`, `pedagogia/OTIMIZACAO-TOKENS-EKL-0.md`
 
@@ -146,4 +146,40 @@ Se validada, essa hipótese pode gerar:
 - experimentos reproduzíveis com `tiktoken`;
 - uma ponte entre economia de tokens, clareza semântica e engenharia cognitiva.
 
-Por enquanto, tratar como **hipótese testável**, não como linguagem adotada ou conhecimento canonizado.
+## Validação humana na interação — 2026-09-28
+
+Durante uso real na conversa, o autor confirmou que a compressão por palavras-chave pode reduzir esforço de leitura quando a palavra possui associação imediata com o significado.
+
+Observações confirmadas pelo autor:
+
+- `gap` foi compreendido quase imediatamente como lacuna/peça faltante;
+- `link` foi compreendido quase imediatamente como conexão entre elementos;
+- `next` foi compreendido quase imediatamente como próximo passo;
+- `counter`, `shift` e `gate` produziram atrito cognitivo perceptível e exigiram microtradução/interpretação;
+- o autor prefere leitura mais curta e densa, mas não quer redução da profundidade do raciocínio;
+- a aplicação mais útil é principalmente **na resposta da IA**, comprimindo frases funcionais recorrentes sem transformar todo o conteúdo em código.
+
+A formulação validada nesta interação é:
+
+```text
+compressão útil para leitura
+= menos frase funcional
++ palavra-chave de associação imediata
++ mesma profundidade
++ baixa latência de compreensão
+```
+
+A verificação não sustenta uma regra universal para outras pessoas. Ela valida, no contexto deste autor e desta interação, que **palavras-chave curtas e semanticamente familiares podem substituir frases recorrentes e reduzir carga de leitura sem perda percebida de entendimento**.
+
+## Consequência para o experimento
+
+O benchmark futuro não deve medir apenas tokens. Deve registrar também **latência de compreensão humana** ou, na prática, se a palavra:
+
+1. é entendida de imediato;
+2. exige microtradução;
+3. interrompe o fluxo;
+4. precisa de legenda recorrente.
+
+Uma palavra mais curta não é melhor se aumentar o custo cognitivo.
+
+Por enquanto, tratar como **hipótese verificada no uso com o autor**, ainda não como regra geral, linguagem adotada universalmente ou conhecimento canonizado para todos os usuários.
