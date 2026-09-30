@@ -16,7 +16,8 @@ O repositório é o motor interno: memória, evidências, unidades de conhecimen
 
 - GOAL-001–010: concluídos.
 - Bootstrap inicial: encerrado.
-- Modo atual: operação contínua por pipelines.
+- Protótipo Web MVP: inicializado em `produto/web/` com experiência interativa (seletor de trilhas, laboratório de contexto e desafio "Caça à Alucinação").
+- Modo atual: operação contínua por pipelines e evolução do produto final.
 - Primeiro caso candidato: Google Takeout/Drive.
 - Takeout/Drive: pipeline definida, mas nenhum Takeout foi processado ou canonizado.
 - EKL-0: schema compacto preparado para classificação/mineração futura do histórico/Takeout, sem execução real ainda.
@@ -51,7 +52,7 @@ O Gemini possui também [GEMINI.md](GEMINI.md), que adapta o contexto comum ao a
 
 ## Navegação
 
-- `produto/`: visão do produto final, experiência por link, público, promessa e limites do MVP.
+- `produto/`: visão do produto final, experiência por link, público, promessa, limites do MVP e protótipo web interativo (`produto/web/`).
 - `capturas/`: entrada bruta ainda não estruturada.
 - `fontes/`: procedência e lotes consultáveis.
 - `experiencias/`: ações, testes e evidências práticas.
