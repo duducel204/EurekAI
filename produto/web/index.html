@@ -1,151 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EurekAI — Alfabetização em Inteligência Artificial</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EurekAI — Descubra IA experimentando</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <span class="logo-icon">💡</span>
-                <span class="logo-text">Eurek<strong>AI</strong></span>
-            </div>
-            <div class="nav-tagline">Alfabetização em IA desde a base zero</div>
-        </div>
-    </header>
+<header class="topbar"><a class="brand" href="#" aria-label="EurekAI">Eurek<span>AI</span></a><div class="progress"><span id="progressText">Experimento 1 de 1</span><div class="bar"><i id="progressBar"></i></div></div></header>
+<main>
+<section id="intro" class="stage active">
+<p class="eyebrow">Não precisa saber nada de IA</p>
+<h1>Em 90 segundos, descubra uma coisa importante sobre IA <em>sem eu te explicar primeiro.</em></h1>
+<p class="lead">Você vai testar, comparar e tirar sua própria conclusão. Depois damos nome ao que você descobriu.</p>
+<div class="mode-grid" aria-label="Escolha seu modo">
+<button class="mode" data-mode="adult"><b>Quero descobrir</b><span>Um problema cotidiano, direto ao ponto.</span></button>
+<button class="mode" data-mode="young"><b>Quero uma missão</b><span>Descoberta rápida em formato de desafio.</span></button>
+<button class="mode" data-mode="guide"><b>Quero aprender para ensinar</b><span>Experimente e depois veja como guiar outra pessoa.</span></button>
+</div>
+</section>
 
-    <main class="container main-content">
-        <!-- Hero & Onboarding -->
-        <section class="hero-section">
-            <span class="badge">Acesso Direto • Sem Cadastro • Gratuito</span>
-            <h1 class="hero-title">Aprenda a entender, usar e questionar a IA com segurança.</h1>
-            <p class="hero-description">
-                Você não precisa saber o que é prompt, modelo ou código. Escolha seu perfil e comece a experimentar em segundos.
-            </p>
+<section id="predict" class="stage">
+<p class="step">01 · PREVEJA</p>
+<h2 id="predictTitle">A mesma pergunta pode gerar respostas muito diferentes. O que mais ajudaria a IA?</h2>
+<div class="prompt-card"><span>PERGUNTA</span><strong>“Por que o céu é azul?”</strong></div>
+<p class="question">Antes de testar, escolha sua hipótese:</p>
+<div class="choices">
+<button data-pred="better">Escrever uma pergunta muito maior</button>
+<button data-pred="context">Saber para quem está respondendo</button>
+<button data-pred="model">Usar uma IA mais avançada</button>
+</div>
+</section>
 
-            <!-- Profile / Track Selector -->
-            <div class="track-selector">
-                <h3>Escolha como prefere aprender:</h3>
-                <div class="track-cards">
-                    <button class="track-card active" data-track="curioso">
-                        <span class="track-icon">🌱</span>
-                        <div class="track-info">
-                            <h4>Iniciante / Adulto Curioso</h4>
-                            <p>Entenda o básico, perca o medo e veja utilidade no dia a dia.</p>
-                        </div>
-                    </button>
-                    <button class="track-card" data-track="jovem">
-                        <span class="track-icon">🚀</span>
-                        <div class="track-info">
-                            <h4>Criança / Jovem</h4>
-                            <p>Aprenda de forma lúdica, criativa e com curiosidade orientada.</p>
-                        </div>
-                    </button>
-                    <button class="track-card" data-track="responsavel">
-                        <span class="track-icon">🛡️</span>
-                        <div class="track-info">
-                            <h4>Pai, Mãe ou Professor</h4>
-                            <p>Guie crianças e jovens no uso seguro e crítico da tecnologia.</p>
-                        </div>
-                    </button>
-                </div>
-            </div>
-        </section>
+<section id="test" class="stage">
+<p class="step">02 · TESTE</p>
+<h2>Agora mude só uma informação.</h2>
+<p class="lead small">A pergunta continuará exatamente igual.</p>
+<div class="context-pills">
+<button data-context="child">Tenho 8 anos</button>
+<button data-context="curious">Sou adulto e não entendo física</button>
+<button data-context="expert">Estudo física na universidade</button>
+</div>
+<div class="answer-wrap hidden" id="answerWrap">
+<div class="answer-label">RESPOSTA SIMULADA</div>
+<div class="answer" id="answer"></div>
+<button class="primary" id="compareBtn">Comparar com outra pessoa →</button>
+</div>
+</section>
 
-        <!-- Interactive Sandbox 1: Causa e Efeito (Contexto e Tom) -->
-        <section class="card-section sandbox-section">
-            <div class="section-header">
-                <span class="section-badge">Experimento #1</span>
-                <h2>Laboratório de Contexto (Causa e Efeito)</h2>
-                <p>Veja como o jeito de perguntar transforma instantaneamente a resposta da IA.</p>
-            </div>
+<section id="compare" class="stage">
+<p class="step">03 · COMPARE</p>
+<h2>A pergunta é a mesma. O que mudou?</h2>
+<div class="compare-grid">
+<article><small>SEM CONTEXTO</small><p>O céu parece azul por causa do espalhamento da luz solar na atmosfera. Comprimentos de onda menores são espalhados com mais eficiência.</p></article>
+<article class="highlight"><small id="contextLabel">COM CONTEXTO</small><p id="compareAnswer"></p></article>
+</div>
+<p class="question">Qual é a diferença mais importante?</p>
+<div class="choices">
+<button data-notice="short">A segunda é só mais curta</button>
+<button data-notice="adapt">A explicação se adaptou a quem vai entendê-la</button>
+<button data-notice="truth">A verdade mudou</button>
+</div>
+</section>
 
-            <div class="sandbox-grid">
-                <div class="sandbox-controls">
-                    <div class="control-group">
-                        <label for="topic-select"><strong>1. O que você quer entender?</strong></label>
-                        <select id="topic-select" class="custom-select">
-                            <option value="fotos">Como a IA reconhece fotos de gatos?</option>
-                            <option value="textos">Como a IA consegue escrever textos?</option>
-                            <option value="erros">Por que a IA inventa informações?</option>
-                        </select>
-                    </div>
+<section id="reveal" class="stage">
+<p class="step">04 · DESCOBRIU</p>
+<div class="aha">⚡</div>
+<h2>Você acabou de descobrir <span>contexto.</span></h2>
+<p class="big-idea">A pergunta quase não mudou. <strong>A informação disponível para responder mudou.</strong></p>
+<div class="equation"><span>pedido</span><b>+</b><span>contexto</span><b>→</b><span>resposta mais adequada</span></div>
+<p id="predictionFeedback" class="feedback"></p>
+<button class="primary" id="challengeBtn">Quero provar que entendi →</button>
+</section>
 
-                    <div class="control-group">
-                        <label><strong>2. Qual o perfil de quem está ouvindo?</strong></label>
-                        <div class="radio-pill-group" id="audience-group">
-                            <button class="pill-btn active" data-audience="8anos">Criança de 8 anos</button>
-                            <button class="pill-btn" data-audience="curioso">Adulto sem jargão</button>
-                            <button class="pill-btn" data-audience="tecnico">Cientista de Dados</button>
-                        </div>
-                    </div>
+<section id="transfer" class="stage">
+<p class="step">05 · APLIQUE</p>
+<h2>Último teste: agora sem ajuda.</h2>
+<p class="lead small">Você quer que uma IA monte um treino. Qual pedido dá a ela mais condições de responder bem?</p>
+<div class="choices transfer">
+<button data-transfer="a">“Monte um treino perfeito para mim.”</button>
+<button data-transfer="b">“Monte um treino de 30 min. Sou iniciante, treino em casa, tenho halteres e quero melhorar condicionamento.”</button>
+<button data-transfer="c">“Pesquise bastante e monte o melhor treino possível.”</button>
+</div>
+<div id="transferFeedback" class="result hidden" aria-live="polite"></div>
+</section>
 
-                    <div class="control-group">
-                        <label for="temp-slider"><strong>3. Nível de Criatividade / "Temperatura":</strong></label>
-                        <div class="slider-container">
-                            <input type="range" id="temp-slider" min="0" max="100" value="30" class="slider">
-                            <div class="slider-labels">
-                                <span>Factual (Exato)</span>
-                                <span id="temp-value-display">30% (Equilibrado)</span>
-                                <span>Criativo (Pode fantasiar)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sandbox-output">
-                    <div class="output-header">
-                        <span class="output-title">🤖 Resposta da IA simulada:</span>
-                        <span class="evidence-tag" id="evidence-trigger">🔍 Ver Princípio Teórico</span>
-                    </div>
-                    <div class="output-body" id="sandbox-result">
-                        <!-- Filled by JS -->
-                    </div>
-                    <div class="principle-box hidden" id="principle-box">
-                        <strong>💡 Princípio EurekAI:</strong>
-                        <p id="principle-text">A IA não "pensa", ela calcula probabilidade de palavras baseando-se no contexto fornecido.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Interactive Sandbox 2: Caça à Alucinação -->
-        <section class="card-section game-section">
-            <div class="section-header">
-                <span class="section-badge">Experimento #2 • Pensamento Crítico</span>
-                <h2>Radar Crítico: Caça à Alucinação 🕵️‍♀️</h2>
-                <p>A IA gera textos convincentes, mas nem sempre verdadeiros. Qual das afirmações abaixo é uma <strong>invenção (alucinação)</strong> da IA?</p>
-            </div>
-
-            <div class="game-container">
-                <div class="game-options" id="game-options">
-                    <!-- Filled by JS -->
-                </div>
-                <div class="game-feedback hidden" id="game-feedback">
-                    <!-- Filled by JS -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Auditability Footer -->
-        <footer class="app-footer">
-            <div class="container footer-content">
-                <p><strong>EurekAI Web MVP</strong> — Motor de conhecimento auditável e pedagógico.</p>
-                <p class="footer-links">
-                    <span>Base de Conhecimento Versionada</span> •
-                    <span>Linguagem EKL-0</span> •
-                    <span>Zero Rastreamento Pessoal</span>
-                </p>
-            </div>
-        </footer>
-    </main>
-
-    <script src="app.js"></script>
-</body>
-</html>
+<section id="finish" class="stage">
+<p class="step">EXPERIMENTO CONCLUÍDO</p>
+<h2>Você não decorou uma regra. Você viu o mecanismo.</h2>
+<p class="big-idea">Quando uma resposta não serve, antes de pedir “uma resposta melhor”, pergunte: <strong>que contexto está faltando?</strong></p>
+<div class="takeaway"><span>Leve isto com você</span><b>Contexto não deixa a IA mais inteligente. Deixa o pedido menos ambíguo.</b></div>
+<button class="secondary" id="restartBtn">↻ Fazer novamente</button>
+<p class="next-note">EurekAI · aprender IA por descoberta, teste e pensamento crítico.</p>
+</section>
+</main>
+<script src="app.js"></script>
+</body></html>
