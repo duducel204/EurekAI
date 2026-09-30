@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EurekAI — Alfabetização em Inteligência Artificial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon">💡</span>
+                <span class="logo-text">Eurek<strong>AI</strong></span>
+            </div>
+            <div class="nav-tagline">Alfabetização em IA desde a base zero</div>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <!-- Hero & Onboarding -->
+        <section class="hero-section">
+            <span class="badge">Acesso Direto • Sem Cadastro • Gratuito</span>
+            <h1 class="hero-title">Aprenda a entender, usar e questionar a IA com segurança.</h1>
+            <p class="hero-description">
+                Você não precisa saber o que é prompt, modelo ou código. Escolha seu perfil e comece a experimentar em segundos.
+            </p>
+
+            <!-- Profile / Track Selector -->
+            <div class="track-selector">
+                <h3>Escolha como prefere aprender:</h3>
+                <div class="track-cards">
+                    <button class="track-card active" data-track="curioso">
+                        <span class="track-icon">🌱</span>
+                        <div class="track-info">
+                            <h4>Iniciante / Adulto Curioso</h4>
+                            <p>Entenda o básico, perca o medo e veja utilidade no dia a dia.</p>
+                        </div>
+                    </button>
+                    <button class="track-card" data-track="jovem">
+                        <span class="track-icon">🚀</span>
+                        <div class="track-info">
+                            <h4>Criança / Jovem</h4>
+                            <p>Aprenda de forma lúdica, criativa e com curiosidade orientada.</p>
+                        </div>
+                    </button>
+                    <button class="track-card" data-track="responsavel">
+                        <span class="track-icon">🛡️</span>
+                        <div class="track-info">
+                            <h4>Pai, Mãe ou Professor</h4>
+                            <p>Guie crianças e jovens no uso seguro e crítico da tecnologia.</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Sandbox 1: Causa e Efeito (Contexto e Tom) -->
+        <section class="card-section sandbox-section">
+            <div class="section-header">
+                <span class="section-badge">Experimento #1</span>
+                <h2>Laboratório de Contexto (Causa e Efeito)</h2>
+                <p>Veja como o jeito de perguntar transforma instantaneamente a resposta da IA.</p>
+            </div>
+
+            <div class="sandbox-grid">
+                <div class="sandbox-controls">
+                    <div class="control-group">
+                        <label for="topic-select"><strong>1. O que você quer entender?</strong></label>
+                        <select id="topic-select" class="custom-select">
+                            <option value="fotos">Como a IA reconhece fotos de gatos?</option>
+                            <option value="textos">Como a IA consegue escrever textos?</option>
+                            <option value="erros">Por que a IA inventa informações?</option>
+                        </select>
+                    </div>
+
+                    <div class="control-group">
+                        <label><strong>2. Qual o perfil de quem está ouvindo?</strong></label>
+                        <div class="radio-pill-group" id="audience-group">
+                            <button class="pill-btn active" data-audience="8anos">Criança de 8 anos</button>
+                            <button class="pill-btn" data-audience="curioso">Adulto sem jargão</button>
+                            <button class="pill-btn" data-audience="tecnico">Cientista de Dados</button>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="temp-slider"><strong>3. Nível de Criatividade / "Temperatura":</strong></label>
+                        <div class="slider-container">
+                            <input type="range" id="temp-slider" min="0" max="100" value="30" class="slider">
+                            <div class="slider-labels">
+                                <span>Factual (Exato)</span>
+                                <span id="temp-value-display">30% (Equilibrado)</span>
+                                <span>Criativo (Pode fantasiar)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sandbox-output">
+                    <div class="output-header">
+                        <span class="output-title">🤖 Resposta da IA simulada:</span>
+                        <span class="evidence-tag" id="evidence-trigger">🔍 Ver Princípio Teórico</span>
+                    </div>
+                    <div class="output-body" id="sandbox-result">
+                        <!-- Filled by JS -->
+                    </div>
+                    <div class="principle-box hidden" id="principle-box">
+                        <strong>💡 Princípio EurekAI:</strong>
+                        <p id="principle-text">A IA não "pensa", ela calcula probabilidade de palavras baseando-se no contexto fornecido.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Sandbox 2: Caça à Alucinação -->
+        <section class="card-section game-section">
+            <div class="section-header">
+                <span class="section-badge">Experimento #2 • Pensamento Crítico</span>
+                <h2>Radar Crítico: Caça à Alucinação 🕵️‍♀️</h2>
+                <p>A IA gera textos convincentes, mas nem sempre verdadeiros. Qual das afirmações abaixo é uma <strong>invenção (alucinação)</strong> da IA?</p>
+            </div>
+
+            <div class="game-container">
+                <div class="game-options" id="game-options">
+                    <!-- Filled by JS -->
+                </div>
+                <div class="game-feedback hidden" id="game-feedback">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Auditability Footer -->
+        <footer class="app-footer">
+            <div class="container footer-content">
+                <p><strong>EurekAI Web MVP</strong> — Motor de conhecimento auditável e pedagógico.</p>
+                <p class="footer-links">
+                    <span>Base de Conhecimento Versionada</span> •
+                    <span>Linguagem EKL-0</span> •
+                    <span>Zero Rastreamento Pessoal</span>
+                </p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
